@@ -1,0 +1,41 @@
+{
+  "Index": {
+    "contribute": "Contribuir",
+    "title": "Herramientas. Para todos.",
+    "desc": "Todas tus herramientas esenciales en un solo lugar. Accesible. Respetuoso de la privacidad. Código abierto.",
+    "about": "Acerca de",
+    "changelog": "Registro de cambios"
+  },
+  "SiteHeader": {
+    "productivity": "Productividad",
+    "money": "Finanzas",
+    "social": "Social",
+    "data": "Datos",
+    "changelog": "Registro de cambios",
+    "about": "Sobre nosotros",
+    "contact": "Contacto",
+    "buttonsm": "Buscar...",
+    "buttonlg": "Buscar algo...",
+    "placeholdertext": "",
+    "empty": "Ingresa un comando o una búsqueda...",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "SiteFooter": {
+    "by": "Construido por ",
+    "source": ". El código fuente está disponible en "
+  },
+  "Error": {
+    "title": "¡Algo salió mal!",
+    "description": "<p>Lamentablemente, hemos encontrado un error.</p><p>Puedes intentar <retry>recargar la página</retry> que estabas visitando.</p>"
+  },
+  "NotFoundPage": {
+    "title": "Página no encontrada",
+    "description": "Por favor, verifica la barra de dirección del navegador o usa la navegación para ir a una página conocida."
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "pathnames": "Nombres de ruta"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "Index": {
+    "contribute": "Beitragen",
+    "title": "Tools. Für jeden.",
+    "desc": "Alle deine wichtigen Tools an einem Ort. Zugänglich. Datenschutzfreundlich. Open Source.",
+    "about": "Über uns",
+    "changelog": "Änderungsprotokoll"
+  },
+  "SiteHeader": {
+    "productivity": "Produktivität",
+    "money": "Finanzen",
+    "social": "Soziales",
+    "data": "Daten",
+    "changelog": "Änderungsprotokoll",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "buttonsm": "Suche...",
+    "buttonlg": "Suche nach etwas...",
+    "placeholdertext": "",
+    "empty": "Geben Sie einen Befehl oder eine Suche ein...",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
+  "SiteFooter": {
+    "by": "Erstellt von ",
+    "source": ". Der Quellcode ist verfügbar auf "
+  },
+  "Error": {
+    "title": "Etwas ist schiefgelaufen!",
+    "description": "<p>Leider ist ein Fehler aufgetreten.</p><p>Sie können versuchen, die Seite, die Sie besucht haben, <retry>neu zu laden</retry>.</p>"
+  },
+  "NotFoundPage": {
+    "title": "Seite nicht gefunden",
+    "description": "Bitte überprüfen Sie die Adressleiste des Browsers oder verwenden Sie die Navigation, um zu einer bekannten Seite zu gelangen."
+  },
+  "Navigation": {
+    "home": "Startseite",
+    "pathnames": "Pfadnamen"
+  }
+}

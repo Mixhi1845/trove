@@ -1,0 +1,41 @@
+{
+  "Index": {
+    "contribute": "Contribute",
+    "title": "Tools. For Everyone.",
+    "desc": "All your essential tools in one place. Accessible. Privacy Friendly. Open Source.",
+    "about": "About",
+    "changelog": "Changelog"
+  },
+  "SiteHeader": {
+    "productivity": "Productivity",
+    "money": "Money",
+    "social": "Socials",
+    "data": "Data",
+    "changelog": "Changelog",
+    "about": "About us",
+    "contact": "Contact",
+    "buttonsm": "Search...",
+    "buttonlg": "Search anything...",
+    "placeholdertext": "",
+    "empty": "Enter a command or search...",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "SiteFooter": {
+    "by": "Built by ",
+    "source": ". The source code is available on "
+  },
+  "Error": {
+    "title": "Something went wrong!",
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
+  },
+  "NotFoundPage": {
+    "title": "Page not found",
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page."
+  },
+  "Navigation": {
+    "home": "Home",
+    "pathnames": "Pathnames"
+  }
+}
