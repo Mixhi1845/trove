@@ -5,10 +5,22 @@ import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Match } from "@/lib/ui/match";
 import copy from "copy-to-clipboard";
-import { FaCheck, FaCopy } from "react-icons/fa";
+import { FaCheck, FaCopy, FaInfo } from "react-icons/fa";
+
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 interface SymbolData {
-  [category: string]: string[];
+  [category: string]: {
+    code: string;
+    text: string;
+    isEmoji: boolean;
+    name: string;
+    keywords: string[];
+  }[];
 }
 
 interface CardSelection {
@@ -27,6 +39,12 @@ const ScientificSymbols = () => {
       .then((response) => response.json())
       .then((data: SymbolData) => {
         setSymbols(data);
+        // Initialize selectedSymbols state
+        const initialSelectedSymbols: CardSelection = {};
+        Object.keys(data).forEach((category) => {
+          initialSelectedSymbols[category] = null;
+        });
+        setSelectedSymbols(initialSelectedSymbols);
       })
       .catch((error) => {
         console.error("Error fetching symbols:", error);
@@ -34,16 +52,13 @@ const ScientificSymbols = () => {
   }, []);
 
   const handleSymbolClick = (category: string, index: number) => {
-    copy(symbols[category][index]);
+    copy(symbols[category][index].text);
     setSelectedSymbols({ ...selectedSymbols, [category]: index });
   };
 
-  const filteredSymbols =
-    value !== "" && symbols[value] ? { [value]: symbols[value] } : symbols;
-
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-      {Object.keys(filteredSymbols).map((category) => (
+    <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
+      {Object.keys(symbols).map((category) => (
         <Card key={category}>
           <CardHeader>
             <CardTitle className="flex items-center justify-between">
@@ -51,31 +66,48 @@ const ScientificSymbols = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-3 gap-2 sm:grid-cols-7 md:grid-cols-4 lg:grid-cols-7">
-              {filteredSymbols[category].map(
-                (symbol: string, index: number) => (
-                  <div
-                    key={index}
-                    onClick={() => handleSymbolClick(category, index)}
-                    className="group shadow grid aspect-square cursor-pointer grid-rows-3 flex-col items-center  rounded-md border border-input bg-background p-2 transition hover:bg-muted"
-                  >
-                    <span className="ml-auto text-sm text-transparent transition duration-75 group-hover:text-foreground/75 group-hover:text-opacity-100">
-                      <Match
-                        value={
-                          selectedSymbols[category] === index
-                            ? "copied"
-                            : "copy"
-                        }
-                        copy={() => <FaCopy />}
-                        copied={() => <FaCheck />}
-                      />
-                    </span>
-                    <span className="flex cursor-pointer justify-center text-xl">
-                      {symbol}
-                    </span>
-                  </div>
-                )
-              )}
+            <div className="grid grid-cols-4 gap-2 md:grid-cols-6 lg:grid-cols-9">
+              {symbols[category].map((symbol, index: number) => (
+                <div
+                  key={index}
+                  onClick={() => handleSymbolClick(category, index)}
+                  className="group shadow grid aspect-square cursor-pointer grid-rows-3 flex-col items-center  rounded-md border border-input bg-background p-2 transition hover:bg-muted"
+                >
+                  <span className="flex justify-between text-sm text-transparent transition duration-75  group-hover:text-foreground/75 group-hover:text-opacity-100">
+                    <Popover>
+                      <PopoverTrigger>
+                        <FaInfo />
+                      </PopoverTrigger>
+                      <PopoverContent className="w-80">
+                        <div className="flex justify-between items-center">
+                          <div className="items-center flex">
+                            <p className="text-sm items-center flex size-8 justify-around mr-2 border rounded-lg">
+                              {symbol.text}
+                            </p>
+                            <p className="font-semibold">{symbol.name}</p>
+                          </div>
+                          <div className="py-1 px-2 border rounded-lg">
+                            <p>{symbol.code}</p>
+                          </div>
+                        </div>
+                        <p className="text-muted-foreground">
+                          {symbol.keywords.join(", ")}
+                        </p>
+                      </PopoverContent>
+                    </Popover>
+                    <Match
+                      value={
+                        selectedSymbols[category] === index ? "copied" : "copy"
+                      }
+                      copy={() => <FaCopy />}
+                      copied={() => <FaCheck />}
+                    />
+                  </span>
+                  <span className="flex cursor-pointer justify-center text-xl">
+                    {symbol.text}
+                  </span>
+                </div>
+              ))}
             </div>
           </CardContent>
         </Card>
@@ -85,50 +117,3 @@ const ScientificSymbols = () => {
 };
 
 export default ScientificSymbols;
-
-{
-  /*<div className="mb-6 flex items-center ">
-        <Popover open={open} onOpenChange={setOpen}>
-          <PopoverTrigger asChild>
-            <Button
-              variant="outline"
-              role="combobox"
-              aria-expanded={open}
-              className="size-auto justify-between p-1 pr-2 text-3xl"
-            >
-              <CaretSortIcon className="mr-2 size-4 shrink-0 opacity-50" />
-              <span className="text-primary">{value ? value : "All"}</span>
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="h-auto p-0 text-xl">
-            <Command>
-              <CommandInput placeholder="Search category..." className="h-9" />
-              <CommandEmpty>No symbol found.</CommandEmpty>
-              <CommandGroup>
-                {symbols &&
-                  Object.keys(symbols).map((category) => (
-                    <CommandItem
-                      key={category}
-                      value={category}
-                      onSelect={(currentValue: string) => {
-                        setValue(currentValue === value ? "" : currentValue);
-                        setOpen(false);
-                      }}
-                    >
-                      {category}
-                      <CheckIcon
-                        className={
-                          value === category
-                            ? "ml-auto size-4 opacity-100"
-                            : "ml-auto size-4 opacity-0"
-                        }
-                      />
-                    </CommandItem>
-                  ))}
-              </CommandGroup>
-            </Command>
-          </PopoverContent>
-        </Popover>
-        <h1 className="pl-1 text-3xl">Symbols</h1>
-      </div>*/
-}

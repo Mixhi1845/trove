@@ -162,7 +162,6 @@ const SymbolPage = () => {
                             )}
                           </p>
                         </div>
-                        <p className="text-muted-foreground">Keywords:</p>
                         <p className="text-muted-foreground">
                           {symbol.keywords.join(", ")}
                         </p>

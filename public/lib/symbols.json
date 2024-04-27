@@ -1,245 +1,1797 @@
 {
-  "Basic Arithmetic": ["+", "-", "=", "×", "÷", "≠"],
-  "Relations": ["<", ">", "≈", "≡", "≤", "≥"],
-  "Algebra": ["∅", "∈", "∉", "∋", "∏", "∑", "√", "∝", "∞"],
-  "Geometry": [
-    "∆",
-    "∇",
-    "⊥",
-    "∠",
-    "∥",
-    "⊞",
-    "⊟",
-    "⊥",
-    "⊾",
-    "⊿",
-    "■",
-    "▬",
-    "◀",
-    "▶",
-    "▷",
-    "◆"
+  "Basic Arithmetic": [
+    {
+      "code": "U+002B",
+      "text": "+",
+      "isEmoji": false,
+      "name": "Plus Sign",
+      "keywords": ["addition", "positive", "math", "arithmetic"]
+    },
+    {
+      "code": "U+002D",
+      "text": "-",
+      "isEmoji": false,
+      "name": "Hyphen-Minus",
+      "keywords": ["subtraction", "negative", "math", "arithmetic"]
+    },
+    {
+      "code": "U+003D",
+      "text": "=",
+      "isEmoji": false,
+      "name": "Equal Sign",
+      "keywords": ["equals", "equivalence", "math", "arithmetic"]
+    },
+    {
+      "code": "U+00D7",
+      "text": "×",
+      "isEmoji": false,
+      "name": "Multiplication Sign",
+      "keywords": ["multiply", "times", "math", "arithmetic"]
+    },
+    {
+      "code": "U+00F7",
+      "text": "÷",
+      "isEmoji": false,
+      "name": "Division Sign",
+      "keywords": ["divide", "quotient", "math", "arithmetic"]
+    },
+    {
+      "code": "U+2260",
+      "text": "≠",
+      "isEmoji": false,
+      "name": "Not Equal To",
+      "keywords": ["not equal", "inequality", "math", "arithmetic"]
+    }
   ],
-  "Calculus": ["∫", "∬", "∭", "∮", "∯", "∰", "∱", "∲", "∳"],
-  "Logic": ["¬", "→", "↔", "⇒", "⇔", "∧", "∨", "⊕"],
-  "Set Theory": ["∅", "∖", "∩", "∪", "⊂", "⊃", "⊆", "⊇"],
-  "Number Theory": ["ℂ", "ℕ", "ℚ", "ℝ", "ℤ", "ℵ", "ℶ", "ℷ", "ℸ"],
+  "Relations": [
+    {
+      "code": "U+003C",
+      "text": "<",
+      "isEmoji": false,
+      "name": "Less-Than Sign",
+      "keywords": ["less than", "inequality", "comparison", "math"]
+    },
+    {
+      "code": "U+003E",
+      "text": ">",
+      "isEmoji": false,
+      "name": "Greater-Than Sign",
+      "keywords": ["greater than", "inequality", "comparison", "math"]
+    },
+    {
+      "code": "U+2248",
+      "text": "≈",
+      "isEmoji": false,
+      "name": "Almost Equal To",
+      "keywords": ["approximately equal", "similar", "comparison", "math"]
+    },
+    {
+      "code": "U+2261",
+      "text": "≡",
+      "isEmoji": false,
+      "name": "Identical To",
+      "keywords": ["congruent", "equal", "equivalence", "math"]
+    },
+    {
+      "code": "U+2264",
+      "text": "≤",
+      "isEmoji": false,
+      "name": "Less-Than or Equal To",
+      "keywords": ["less than or equal", "inequality", "comparison", "math"]
+    },
+    {
+      "code": "U+2265",
+      "text": "≥",
+      "isEmoji": false,
+      "name": "Greater-Than or Equal To",
+      "keywords": ["greater than or equal", "inequality", "comparison", "math"]
+    }
+  ],
+  "Algebra": [
+    {
+      "code": "U+2205",
+      "text": "∅",
+      "isEmoji": false,
+      "name": "Empty Set",
+      "keywords": ["null set", "void", "set theory", "math"]
+    },
+    {
+      "code": "U+2208",
+      "text": "∈",
+      "isEmoji": false,
+      "name": "Element Of",
+      "keywords": ["member of", "set membership", "set theory", "math"]
+    },
+    {
+      "code": "U+2209",
+      "text": "∉",
+      "isEmoji": false,
+      "name": "Not an Element Of",
+      "keywords": ["not a member", "set membership", "set theory", "math"]
+    },
+    {
+      "code": "U+220B",
+      "text": "∋",
+      "isEmoji": false,
+      "name": "Contains as Member",
+      "keywords": ["set inclusion", "set theory", "math"]
+    },
+    {
+      "code": "U+220F",
+      "text": "∏",
+      "isEmoji": false,
+      "name": "N-ary Product",
+      "keywords": ["product", "multiplication", "sigma notation", "math"]
+    },
+    {
+      "code": "U+2211",
+      "text": "∑",
+      "isEmoji": false,
+      "name": "N-ary Summation",
+      "keywords": ["sum", "addition", "sigma notation", "math"]
+    },
+    {
+      "code": "U+221A",
+      "text": "√",
+      "isEmoji": false,
+      "name": "Square Root",
+      "keywords": ["radical", "root", "math", "arithmetic"]
+    },
+    {
+      "code": "U+221D",
+      "text": "∝",
+      "isEmoji": false,
+      "name": "Proportional To",
+      "keywords": ["proportion", "ratio", "analogy", "math"]
+    },
+    {
+      "code": "U+221E",
+      "text": "∞",
+      "isEmoji": false,
+      "name": "Infinity",
+      "keywords": ["unbounded", "limitless", "endless", "math"]
+    }
+  ],
+  "Geometry": [
+    {
+      "code": "U+2206",
+      "text": "∆",
+      "isEmoji": false,
+      "name": "Increment",
+      "keywords": ["triangle", "change", "variation", "math", "geometry"]
+    },
+    {
+      "code": "U+2207",
+      "text": "∇",
+      "isEmoji": false,
+      "name": "Nabla",
+      "keywords": [
+        "del",
+        "gradient",
+        "differential operator",
+        "math",
+        "geometry"
+      ]
+    },
+    {
+      "code": "U+21D0",
+      "text": "⊥",
+      "isEmoji": false,
+      "name": "Left Double Arrow",
+      "keywords": ["perpendicular", "orthogonal", "angle", "geometry"]
+    },
+    {
+      "code": "U+2220",
+      "text": "∠",
+      "isEmoji": false,
+      "name": "Angle",
+      "keywords": ["corner", "vertex", "measure", "geometry"]
+    },
+    {
+      "code": "U+2225",
+      "text": "∥",
+      "isEmoji": false,
+      "name": "Parallel To",
+      "keywords": ["parallel lines", "collinear", "geometry"]
+    },
+    {
+      "code": "U+2295",
+      "text": "⊞",
+      "isEmoji": false,
+      "name": "Circled Plus",
+      "keywords": ["addition", "sum", "geometry", "set theory"]
+    },
+    {
+      "code": "U+2297",
+      "text": "⊟",
+      "isEmoji": false,
+      "name": "Circled Minus",
+      "keywords": ["subtraction", "difference", "geometry", "set theory"]
+    },
+    {
+      "code": "U+21D0",
+      "text": "⊥",
+      "isEmoji": false,
+      "name": "Left Double Arrow",
+      "keywords": ["perpendicular", "orthogonal", "angle", "geometry"]
+    },
+    {
+      "code": "U+22DE",
+      "text": "⊾",
+      "isEmoji": false,
+      "name": "Equal to or Precedes",
+      "keywords": ["geometry", "order", "comparison"]
+    },
+    {
+      "code": "U+22DF",
+      "text": "⊿",
+      "isEmoji": false,
+      "name": "Equal to or Succeeds",
+      "keywords": ["geometry", "order", "comparison"]
+    },
+    {
+      "code": "U+25A1",
+      "text": "■",
+      "isEmoji": false,
+      "name": "White Square",
+      "keywords": ["geometry", "shape", "box"]
+    },
+    {
+      "code": "U+2500",
+      "text": "▬",
+      "isEmoji": false,
+      "name": "Box Drawings Light Horizontal",
+      "keywords": ["geometry", "line", "bar"]
+    },
+    {
+      "code": "U+25C0",
+      "text": "◀",
+      "isEmoji": false,
+      "name": "Black Left-Pointing Triangle",
+      "keywords": ["geometry", "arrow", "direction"]
+    },
+    {
+      "code": "U+25B6",
+      "text": "▶",
+      "isEmoji": false,
+      "name": "Black Right-Pointing Triangle",
+      "keywords": ["geometry", "arrow", "direction"]
+    },
+    {
+      "code": "U+25B7",
+      "text": "▷",
+      "isEmoji": false,
+      "name": "White Right-Pointing Triangle",
+      "keywords": ["geometry", "arrow", "direction"]
+    },
+    {
+      "code": "U+25C6",
+      "text": "◆",
+      "isEmoji": false,
+      "name": "Black Diamond",
+      "keywords": ["geometry", "shape", "rhombus"]
+    }
+  ],
+  "Calculus": [
+    {
+      "code": "U+222B",
+      "text": "∫",
+      "isEmoji": false,
+      "name": "Integral",
+      "keywords": ["calculus", "integration", "sum", "area"]
+    },
+    {
+      "code": "U+222C",
+      "text": "∬",
+      "isEmoji": false,
+      "name": "Double Integral",
+      "keywords": ["calculus", "double integration", "multiple integrals"]
+    },
+    {
+      "code": "U+222D",
+      "text": "∭",
+      "isEmoji": false,
+      "name": "Triple Integral",
+      "keywords": ["calculus", "triple integration", "multiple integrals"]
+    },
+    {
+      "code": "U+222E",
+      "text": "∮",
+      "isEmoji": false,
+      "name": "Contour Integral",
+      "keywords": ["calculus", "line integral", "closed path"]
+    },
+    {
+      "code": "U+222F",
+      "text": "∯",
+      "isEmoji": false,
+      "name": "Surface Integral",
+      "keywords": ["calculus", "surface integral", "area element"]
+    },
+    {
+      "code": "U+2230",
+      "text": "∰",
+      "isEmoji": false,
+      "name": "Volume Integral",
+      "keywords": ["calculus", "volume integral", "space element"]
+    },
+    {
+      "code": "U+2231",
+      "text": "∱",
+      "isEmoji": false,
+      "name": "Clockwise Integral",
+      "keywords": ["calculus", "line integral", "closed path"]
+    },
+    {
+      "code": "U+2232",
+      "text": "∲",
+      "isEmoji": false,
+      "name": "Clockwise Contour Integral",
+      "keywords": ["calculus", "line integral", "closed path"]
+    },
+    {
+      "code": "U+2233",
+      "text": "∳",
+      "isEmoji": false,
+      "name": "Anticlockwise Contour Integral",
+      "keywords": ["calculus", "line integral", "closed path"]
+    }
+  ],
+  "Set Theory": [
+    {
+      "code": "U+2205",
+      "text": "∅",
+      "isEmoji": false,
+      "name": "Empty Set",
+      "keywords": ["null set", "void", "set theory", "math"]
+    },
+    {
+      "code": "U+2216",
+      "text": "∖",
+      "isEmoji": false,
+      "name": "Set Minus",
+      "keywords": [
+        "set difference",
+        "relative complement",
+        "set theory",
+        "math"
+      ]
+    },
+    {
+      "code": "U+2229",
+      "text": "∩",
+      "isEmoji": false,
+      "name": "Intersection",
+      "keywords": ["set intersection", "common elements", "set theory", "math"]
+    },
+    {
+      "code": "U+222A",
+      "text": "∪",
+      "isEmoji": false,
+      "name": "Union",
+      "keywords": ["set union", "combined elements", "set theory", "math"]
+    },
+    {
+      "code": "U+2282",
+      "text": "⊂",
+      "isEmoji": false,
+      "name": "Subset Of",
+      "keywords": ["proper subset", "set inclusion", "set theory", "math"]
+    },
+    {
+      "code": "U+2283",
+      "text": "⊃",
+      "isEmoji": false,
+      "name": "Superset Of",
+      "keywords": ["proper superset", "set inclusion", "set theory", "math"]
+    },
+    {
+      "code": "U+2286",
+      "text": "⊆",
+      "isEmoji": false,
+      "name": "Subset Of Or Equal To",
+      "keywords": ["subset", "set inclusion", "set theory", "math"]
+    },
+    {
+      "code": "U+2287",
+      "text": "⊇",
+      "isEmoji": false,
+      "name": "Superset Of Or Equal To",
+      "keywords": ["superset", "set inclusion", "set theory", "math"]
+    }
+  ],
+  "Number Theory": [
+    {
+      "code": "U+2102",
+      "text": "ℂ",
+      "isEmoji": false,
+      "name": "Double-Struck Capital C",
+      "keywords": ["complex numbers", "number theory", "math"]
+    },
+    {
+      "code": "U+2115",
+      "text": "ℕ",
+      "isEmoji": false,
+      "name": "Double-Struck Capital N",
+      "keywords": ["natural numbers", "number theory", "math"]
+    },
+    {
+      "code": "U+2119",
+      "text": "ℚ",
+      "isEmoji": false,
+      "name": "Double-Struck Capital Q",
+      "keywords": ["rational numbers", "number theory", "math"]
+    },
+    {
+      "code": "U+211D",
+      "text": "ℝ",
+      "isEmoji": false,
+      "name": "Double-Struck Capital R",
+      "keywords": ["real numbers", "number theory", "math"]
+    },
+    {
+      "code": "U+2124",
+      "text": "ℤ",
+      "isEmoji": false,
+      "name": "Double-Struck Capital Z",
+      "keywords": ["integers", "number theory", "math"]
+    },
+    {
+      "code": "U+2135",
+      "text": "ℵ",
+      "isEmoji": false,
+      "name": "Alef Symbol",
+      "keywords": ["aleph", "transfinite numbers", "number theory", "math"]
+    },
+    {
+      "code": "U+2136",
+      "text": "ℶ",
+      "isEmoji": false,
+      "name": "Bet Symbol",
+      "keywords": ["beth", "transfinite numbers", "number theory", "math"]
+    },
+    {
+      "code": "U+2137",
+      "text": "ℷ",
+      "isEmoji": false,
+      "name": "Gimel Symbol",
+      "keywords": ["gimel", "transfinite numbers", "number theory", "math"]
+    },
+    {
+      "code": "U+2138",
+      "text": "ℸ",
+      "isEmoji": false,
+      "name": "Dalet Symbol",
+      "keywords": ["dalet", "transfinite numbers", "number theory", "math"]
+    }
+  ],
   "Greek Operators": [
-    "α",
-    "β",
-    "γ",
-    "δ",
-    "ε",
-    "ζ",
-    "η",
-    "θ",
-    "ι",
-    "κ",
-    "λ",
-    "μ",
-    "ν",
-    "ξ",
-    "ο",
-    "π",
-    "ρ",
-    "σ",
-    "τ",
-    "υ",
-    "φ",
-    "χ",
-    "ψ",
-    "ω"
+    {
+      "code": "U+03B1",
+      "text": "α",
+      "isEmoji": false,
+      "name": "Greek Small Letter Alpha",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03B2",
+      "text": "β",
+      "isEmoji": false,
+      "name": "Greek Small Letter Beta",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03B3",
+      "text": "γ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Gamma",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03B4",
+      "text": "δ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Delta",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03B5",
+      "text": "ε",
+      "isEmoji": false,
+      "name": "Greek Small Letter Epsilon",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03B6",
+      "text": "ζ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Zeta",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03B7",
+      "text": "η",
+      "isEmoji": false,
+      "name": "Greek Small Letter Eta",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03B8",
+      "text": "θ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Theta",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03B9",
+      "text": "ι",
+      "isEmoji": false,
+      "name": "Greek Small Letter Iota",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03BA",
+      "text": "κ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Kappa",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03BB",
+      "text": "λ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Lambda",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03BC",
+      "text": "μ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Mu",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03BD",
+      "text": "ν",
+      "isEmoji": false,
+      "name": "Greek Small Letter Nu",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03BE",
+      "text": "ξ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Xi",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03BF",
+      "text": "ο",
+      "isEmoji": false,
+      "name": "Greek Small Letter Omicron",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03C0",
+      "text": "π",
+      "isEmoji": false,
+      "name": "Greek Small Letter Pi",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03C1",
+      "text": "ρ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Rho",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03C3",
+      "text": "σ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Sigma",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03C4",
+      "text": "τ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Tau",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03C5",
+      "text": "υ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Upsilon",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03C6",
+      "text": "φ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Phi",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03C7",
+      "text": "χ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Chi",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03C8",
+      "text": "ψ",
+      "isEmoji": false,
+      "name": "Greek Small Letter Psi",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    },
+    {
+      "code": "U+03C9",
+      "text": "ω",
+      "isEmoji": false,
+      "name": "Greek Small Letter Omega",
+      "keywords": ["greek letter", "math", "physics", "chemistry"]
+    }
   ],
   "Arrows": [
-    "←",
-    "↑",
-    "→",
-    "↓",
-    "↔",
-    "↕",
-    "↖",
-    "↗",
-    "↘",
-    "↙",
-    "⇀",
-    "⇁",
-    "⇂",
-    "⇃",
-    "⇤",
-    "⇥",
-    "⇧",
-    "⇨",
-    "⇩",
-    "⇪",
-    "⇫",
-    "⇬",
-    "⇭",
-    "⇮",
-    "⇯",
-    "⇰",
-    "⇱",
-    "⇲",
-    "⇳",
-    "⇴",
-    "⇵",
-    "⇶",
-    "⇷",
-    "⇸",
-    "⇹",
-    "⇺",
-    "⇻",
-    "⇼",
-    "⇽",
-    "⇾",
-    "⇿",
-    "⟵",
-    "⟶",
-    "⟷",
-    "⟸",
-    "⟹",
-    "⟺",
-    "⟻",
-    "⟼",
-    "⟽",
-    "⟾",
-    "⟿",
-    "➔"
-  ],
-  "Music": ["♪", "♫", "♬", "♭", "♮", "♯", "♩"],
-  "Classic Game": [
-    "♔",
-    "♕",
-    "♖",
-    "♗",
-    "♘",
-    "♙",
-    "♚",
-    "♛",
-    "♜",
-    "♝",
-    "♞",
-    "♟",
-    "♠",
-    "♡",
-    "♢",
-    "♣",
-    "♤",
-    "♥",
-    "♦",
-    "♧"
+    {
+      "code": "U+2190",
+      "text": "←",
+      "isEmoji": false,
+      "name": "Leftward Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2191",
+      "text": "↑",
+      "isEmoji": false,
+      "name": "Upward Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2192",
+      "text": "→",
+      "isEmoji": false,
+      "name": "Rightward Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2193",
+      "text": "↓",
+      "isEmoji": false,
+      "name": "Downward Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2194",
+      "text": "↔",
+      "isEmoji": false,
+      "name": "Left Right Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2195",
+      "text": "↕",
+      "isEmoji": false,
+      "name": "Up Down Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2196",
+      "text": "↖",
+      "isEmoji": false,
+      "name": "North West Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2197",
+      "text": "↗",
+      "isEmoji": false,
+      "name": "North East Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2198",
+      "text": "↘",
+      "isEmoji": false,
+      "name": "South East Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2199",
+      "text": "↙",
+      "isEmoji": false,
+      "name": "South West Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21C0",
+      "text": "⇀",
+      "isEmoji": false,
+      "name": "Rightward Harpoon",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21C1",
+      "text": "⇁",
+      "isEmoji": false,
+      "name": "Leftward Harpoon",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21C2",
+      "text": "⇂",
+      "isEmoji": false,
+      "name": "Downward Harpoon",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21C3",
+      "text": "⇃",
+      "isEmoji": false,
+      "name": "Upward Harpoon",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21E4",
+      "text": "⇤",
+      "isEmoji": false,
+      "name": "Leftward Arrow To Bar",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21E5",
+      "text": "⇥",
+      "isEmoji": false,
+      "name": "Rightward Arrow To Bar",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21E7",
+      "text": "⇧",
+      "isEmoji": false,
+      "name": "Upwards White Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21E8",
+      "text": "⇨",
+      "isEmoji": false,
+      "name": "Rightwards White Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21E9",
+      "text": "⇩",
+      "isEmoji": false,
+      "name": "Downwards White Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21EA",
+      "text": "⇪",
+      "isEmoji": false,
+      "name": "Upwards White Arrow From Bar",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21EB",
+      "text": "⇫",
+      "isEmoji": false,
+      "name": "Upwards White Arrow On Pedestal",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21EC",
+      "text": "⇬",
+      "isEmoji": false,
+      "name": "Downwards White Arrow On Pedestal",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21ED",
+      "text": "⇭",
+      "isEmoji": false,
+      "name": "Leftwards White Arrow On Pedestal",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21EE",
+      "text": "⇮",
+      "isEmoji": false,
+      "name": "Rightwards White Arrow On Pedestal",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21EF",
+      "text": "⇯",
+      "isEmoji": false,
+      "name": "Upwards White Arrow On Pedestal",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21F0",
+      "text": "⇰",
+      "isEmoji": false,
+      "name": "Downwards White Arrow On Pedestal",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21F1",
+      "text": "⇱",
+      "isEmoji": false,
+      "name": "Leftwards White Arrow On Pedestal",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21F2",
+      "text": "⇲",
+      "isEmoji": false,
+      "name": "Rightwards White Arrow On Pedestal",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21F3",
+      "text": "⇳",
+      "isEmoji": false,
+      "name": "Up Down White Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21F4",
+      "text": "⇴",
+      "isEmoji": false,
+      "name": "Right Arrow With Small Circle",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21F5",
+      "text": "⇵",
+      "isEmoji": false,
+      "name": "Downwards Arrow Leftwards Of Upwards Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21F6",
+      "text": "⇶",
+      "isEmoji": false,
+      "name": "Three Rightwards Arrows",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21F7",
+      "text": "⇷",
+      "isEmoji": false,
+      "name": "Leftwards Arrow With Vertical Stroke",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21F8",
+      "text": "⇸",
+      "isEmoji": false,
+      "name": "Rightwards Arrow With Vertical Stroke",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21F9",
+      "text": "⇹",
+      "isEmoji": false,
+      "name": "Left Right Arrow With Vertical Stroke",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21FA",
+      "text": "⇺",
+      "isEmoji": false,
+      "name": "Leftwards Arrow With Double Vertical Stroke",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21FB",
+      "text": "⇻",
+      "isEmoji": false,
+      "name": "Rightwards Arrow With Double Vertical Stroke",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21FC",
+      "text": "⇼",
+      "isEmoji": false,
+      "name": "Left Right Arrow With Double Vertical Stroke",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21FD",
+      "text": "⇽",
+      "isEmoji": false,
+      "name": "Leftwards Open-Headed Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21FE",
+      "text": "⇾",
+      "isEmoji": false,
+      "name": "Rightwards Open-Headed Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+21FF",
+      "text": "⇿",
+      "isEmoji": false,
+      "name": "Left Right Open-Headed Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2190",
+      "text": "⟵",
+      "isEmoji": false,
+      "name": "Leftwards Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2192",
+      "text": "⟶",
+      "isEmoji": false,
+      "name": "Rightwards Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2194",
+      "text": "⟷",
+      "isEmoji": false,
+      "name": "Left Right Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2190",
+      "text": "⟸",
+      "isEmoji": false,
+      "name": "Leftwards Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2192",
+      "text": "⟹",
+      "isEmoji": false,
+      "name": "Rightwards Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2194",
+      "text": "⟺",
+      "isEmoji": false,
+      "name": "Left Right Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2190",
+      "text": "⟻",
+      "isEmoji": false,
+      "name": "Leftwards Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2192",
+      "text": "⟼",
+      "isEmoji": false,
+      "name": "Rightwards Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2194",
+      "text": "⟽",
+      "isEmoji": false,
+      "name": "Left Right Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2192",
+      "text": "⟾",
+      "isEmoji": false,
+      "name": "Rightwards Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2190",
+      "text": "⟿",
+      "isEmoji": false,
+      "name": "Leftwards Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    },
+    {
+      "code": "U+2794",
+      "text": "➔",
+      "isEmoji": false,
+      "name": "Heavy Rightwards Arrow",
+      "keywords": ["direction", "navigation", "math", "logic"]
+    }
   ],
   "Other Useful Symbols": [
-    "℅",
-    "∴",
-    "∵",
-    "∶",
-    "∷",
-    "∾",
-    "≁",
-    "≮",
-    "≯",
-    "≫",
-    "≪",
-    "⊕",
-    "⊗",
-    "⊙",
-    "⊚",
-    "⊛",
-    "⊠",
-    "⊡",
-    "⊢",
-    "⊣",
-    "⊤",
-    "⊥",
-    "⊦",
-    "⊧",
-    "⊨",
-    "⊩",
-    "⊪",
-    "⊫",
-    "⊬",
-    "⊭",
-    "⊮",
-    "⊯",
-    "⊰",
-    "⊱",
-    "⊲",
-    "⊳",
-    "⊴",
-    "⊵",
-    "⊶",
-    "⊷",
-    "⊸",
-    "⊹",
-    "⊺",
-    "⊻",
-    "⊼",
-    "⊽",
-    "⊾",
-    "⊿",
-    "⋀",
-    "⋁",
-    "⋂",
-    "⋃",
-    "⋄",
-    "⋅",
-    "⋆",
-    "⋇",
-    "⋈",
-    "⋉",
-    "⋊",
-    "⋋",
-    "⋌",
-    "⋍",
-    "⋎",
-    "⋏",
-    "⋐",
-    "⋑",
-    "⋒",
-    "⋓",
-    "⋔",
-    "⋕",
-    "⋖",
-    "⋗",
-    "⋘",
-    "⋙",
-    "⋚",
-    "⋛",
-    "⋜",
-    "⋝",
-    "⋞",
-    "⋟",
-    "⋠",
-    "⋡",
-    "⋢",
-    "⋣",
-    "⋤",
-    "⋥",
-    "⋦",
-    "⋧",
-    "⋨",
-    "⋩",
-    "⋪",
-    "⋫",
-    "⋬",
-    "⋭",
-    "⋮",
-    "⋯",
-    "⋰",
-    "⋱",
-    "⋲",
-    "⋳",
-    "⋴",
-    "⋵",
-    "⋶",
-    "⋷",
-    "⋸",
-    "⋹",
-    "⋺",
-    "⋻",
-    "⋼",
-    "⋽",
-    "⋾",
-    "⋿"
+    {
+      "code": "U+2105",
+      "text": "℅",
+      "isEmoji": false,
+      "name": "Care Of",
+      "keywords": ["symbol", "math", "measurement", "typography"]
+    },
+    {
+      "code": "U+2234",
+      "text": "∴",
+      "isEmoji": false,
+      "name": "Therefore",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+2235",
+      "text": "∵",
+      "isEmoji": false,
+      "name": "Because",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+2236",
+      "text": "∶",
+      "isEmoji": false,
+      "name": "Ratio",
+      "keywords": ["symbol", "math", "measurement", "typography"]
+    },
+    {
+      "code": "U+2237",
+      "text": "∷",
+      "isEmoji": false,
+      "name": "Proportion",
+      "keywords": ["symbol", "math", "measurement", "typography"]
+    },
+    {
+      "code": "U+223E",
+      "text": "∾",
+      "isEmoji": false,
+      "name": "Inverted Lazy S",
+      "keywords": ["symbol", "math", "typography"]
+    },
+    {
+      "code": "U+2241",
+      "text": "≁",
+      "isEmoji": false,
+      "name": "Not Tilde",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+226E",
+      "text": "≮",
+      "isEmoji": false,
+      "name": "Not Less-Than",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+226F",
+      "text": "≯",
+      "isEmoji": false,
+      "name": "Not Greater-Than",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+226B",
+      "text": "≫",
+      "isEmoji": false,
+      "name": "Much Greater-Than",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+226A",
+      "text": "≪",
+      "isEmoji": false,
+      "name": "Much Less-Than",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+2295",
+      "text": "⊕",
+      "isEmoji": false,
+      "name": "Circled Plus",
+      "keywords": ["symbol", "math", "logic", "typography"]
+    },
+    {
+      "code": "U+2297",
+      "text": "⊗",
+      "isEmoji": false,
+      "name": "Circled Times",
+      "keywords": ["symbol", "math", "logic", "typography"]
+    },
+    {
+      "code": "U+2299",
+      "text": "⊙",
+      "isEmoji": false,
+      "name": "Circled Dot Operator",
+      "keywords": ["symbol", "math", "logic", "typography"]
+    },
+    {
+      "code": "U+229A",
+      "text": "⊚",
+      "isEmoji": false,
+      "name": "Circled Ring Operator",
+      "keywords": ["symbol", "math", "logic", "typography"]
+    },
+    {
+      "code": "U+229B",
+      "text": "⊛",
+      "isEmoji": false,
+      "name": "Circled Asterisk Operator",
+      "keywords": ["symbol", "math", "logic", "typography"]
+    },
+    {
+      "code": "U+2298",
+      "text": "⊠",
+      "isEmoji": false,
+      "name": "Circled Division Slash",
+      "keywords": ["symbol", "math", "logic", "typography"]
+    },
+    {
+      "code": "U+2291",
+      "text": "⊡",
+      "isEmoji": false,
+      "name": "Square Lozenge",
+      "keywords": ["symbol", "math", "logic", "typography"]
+    },
+    {
+      "code": "U+22A2",
+      "text": "⊢",
+      "isEmoji": false,
+      "name": "Right Tack",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22A3",
+      "text": "⊣",
+      "isEmoji": false,
+      "name": "Left Tack",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22A4",
+      "text": "⊤",
+      "isEmoji": false,
+      "name": "Down Tack",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22A5",
+      "text": "⊥",
+      "isEmoji": false,
+      "name": "Up Tack",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22A6",
+      "text": "⊦",
+      "isEmoji": false,
+      "name": "Assertion",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22A7",
+      "text": "⊧",
+      "isEmoji": false,
+      "name": "models",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22A8",
+      "text": "⊨",
+      "isEmoji": false,
+      "name": "True",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22A9",
+      "text": "⊩",
+      "isEmoji": false,
+      "name": "Forces",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22AA",
+      "text": "⊪",
+      "isEmoji": false,
+      "name": "Triple Vertical Bar Right Turnstile",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22AB",
+      "text": "⊫",
+      "isEmoji": false,
+      "name": "Double Vertical Bar Double Right Turnstile",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22AC",
+      "text": "⊬",
+      "isEmoji": false,
+      "name": "Does Not Prove",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22AD",
+      "text": "⊭",
+      "isEmoji": false,
+      "name": "Not True",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22AE",
+      "text": "⊮",
+      "isEmoji": false,
+      "name": "Does Not Turnstile",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22AF",
+      "text": "⊯",
+      "isEmoji": false,
+      "name": "Not Double Turnstile",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22B0",
+      "text": "⊰",
+      "isEmoji": false,
+      "name": "Precedes Under Relation",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22B1",
+      "text": "⊱",
+      "isEmoji": false,
+      "name": "Succeeds Under Relation",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22B2",
+      "text": "⊲",
+      "isEmoji": false,
+      "name": "Normal Subgroup Of",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22B3",
+      "text": "⊳",
+      "isEmoji": false,
+      "name": "Contains As Normal Subgroup",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22B4",
+      "text": "⊴",
+      "isEmoji": false,
+      "name": "Normal Subgroup Of Or Equal To",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22B5",
+      "text": "⊵",
+      "isEmoji": false,
+      "name": "Contains As Normal Subgroup Or Equal To",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22B6",
+      "text": "⊶",
+      "isEmoji": false,
+      "name": "Original Of",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22B7",
+      "text": "⊷",
+      "isEmoji": false,
+      "name": "Image Of",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22B8",
+      "text": "⊸",
+      "isEmoji": false,
+      "name": "Multimap",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22B9",
+      "text": "⊹",
+      "isEmoji": false,
+      "name": "Hermitian Conjugate Matrix",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22BA",
+      "text": "⊺",
+      "isEmoji": false,
+      "name": "Intercalate",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22BB",
+      "text": "⊻",
+      "isEmoji": false,
+      "name": "Xor",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22BC",
+      "text": "⊼",
+      "isEmoji": false,
+      "name": "Nand",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22BD",
+      "text": "⊽",
+      "isEmoji": false,
+      "name": "Nor",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22BE",
+      "text": "⊾",
+      "isEmoji": false,
+      "name": "Right Angle With Arc",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22BF",
+      "text": "⊿",
+      "isEmoji": false,
+      "name": "Right Triangle",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22C0",
+      "text": "⋀",
+      "isEmoji": false,
+      "name": "N-Ary Logical And",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22C1",
+      "text": "⋁",
+      "isEmoji": false,
+      "name": "N-Ary Logical Or",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22C2",
+      "text": "⋂",
+      "isEmoji": false,
+      "name": "N-Ary Intersection",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22C3",
+      "text": "⋃",
+      "isEmoji": false,
+      "name": "N-Ary Union",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22C4",
+      "text": "⋄",
+      "isEmoji": false,
+      "name": "Diamond Operator",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+22C5",
+      "text": "⋅",
+      "isEmoji": false,
+      "name": "Dot Operator",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+2022",
+      "text": "⋆",
+      "isEmoji": false,
+      "name": "Bullet",
+      "keywords": ["symbol", "typography", "math", "list"]
+    },
+    {
+      "code": "U+2207",
+      "text": "⋇",
+      "isEmoji": false,
+      "name": "Nabla",
+      "keywords": ["symbol", "math", "physics", "calculus"]
+    },
+    {
+      "code": "U+2208",
+      "text": "⋈",
+      "isEmoji": false,
+      "name": "Element Of",
+      "keywords": ["symbol", "logic", "math", "set theory"]
+    },
+    {
+      "code": "U+2209",
+      "text": "⋉",
+      "isEmoji": false,
+      "name": "Not An Element Of",
+      "keywords": ["symbol", "logic", "math", "set theory"]
+    },
+    {
+      "code": "U+220A",
+      "text": "⋊",
+      "isEmoji": false,
+      "name": "Small Element Of",
+      "keywords": ["symbol", "logic", "math", "set theory"]
+    },
+    {
+      "code": "U+220B",
+      "text": "⋋",
+      "isEmoji": false,
+      "name": "Contains As Member",
+      "keywords": ["symbol", "logic", "math", "set theory"]
+    },
+    {
+      "code": "U+220C",
+      "text": "⋌",
+      "isEmoji": false,
+      "name": "Does Not Contain As Member",
+      "keywords": ["symbol", "logic", "math", "set theory"]
+    },
+    {
+      "code": "U+220D",
+      "text": "⋍",
+      "isEmoji": false,
+      "name": "Small Contains As Member",
+      "keywords": ["symbol", "logic", "math", "set theory"]
+    },
+    {
+      "code": "U+220E",
+      "text": "⋎",
+      "isEmoji": false,
+      "name": "End Of Proof",
+      "keywords": ["symbol", "logic", "math", "typography"]
+    },
+    {
+      "code": "U+220F",
+      "text": "⋏",
+      "isEmoji": false,
+      "name": "N-Ary Product",
+      "keywords": ["symbol", "math", "set theory", "calculus"]
+    },
+    {
+      "code": "U+2210",
+      "text": "⋐",
+      "isEmoji": false,
+      "name": "N-Ary Coproduct",
+      "keywords": ["symbol", "math", "set theory", "calculus"]
+    },
+    {
+      "code": "U+2211",
+      "text": "⋑",
+      "isEmoji": false,
+      "name": "N-Ary Summation",
+      "keywords": ["symbol", "math", "calculus", "statistics"]
+    },
+    {
+      "code": "U+2212",
+      "text": "⋒",
+      "isEmoji": false,
+      "name": "Minus Sign",
+      "keywords": ["symbol", "math", "arithmetic", "typography"]
+    },
+    {
+      "code": "U+2213",
+      "text": "⋓",
+      "isEmoji": false,
+      "name": "Minus-Or-Plus Sign",
+      "keywords": ["symbol", "math", "arithmetic", "typography"]
+    },
+    {
+      "code": "U+2214",
+      "text": "⋔",
+      "isEmoji": false,
+      "name": "Dot Plus",
+      "keywords": ["symbol", "math", "arithmetic", "typography"]
+    },
+    {
+      "code": "U+2215",
+      "text": "⋕",
+      "isEmoji": false,
+      "name": "Division Slash",
+      "keywords": ["symbol", "math", "arithmetic", "typography"]
+    },
+    {
+      "code": "U+2216",
+      "text": "⋖",
+      "isEmoji": false,
+      "name": "Set Minus",
+      "keywords": ["symbol", "math", "set theory", "logic"]
+    },
+    {
+      "code": "U+2217",
+      "text": "⋗",
+      "isEmoji": false,
+      "name": "Asterisk Operator",
+      "keywords": ["symbol", "math", "logic", "typography"]
+    },
+    {
+      "code": "U+2218",
+      "text": "⋘",
+      "isEmoji": false,
+      "name": "Ring Operator",
+      "keywords": ["symbol", "math", "logic", "typography"]
+    },
+    {
+      "code": "U+2219",
+      "text": "⋙",
+      "isEmoji": false,
+      "name": "Bullet Operator",
+      "keywords": ["symbol", "math", "logic", "typography"]
+    },
+    {
+      "code": "U+221A",
+      "text": "⋚",
+      "isEmoji": false,
+      "name": "Less-Than Or Equal To",
+      "keywords": ["symbol", "math", "logic", "comparison"]
+    },
+    {
+      "code": "U+221B",
+      "text": "⋛",
+      "isEmoji": false,
+      "name": "Greater-Than Or Equal To",
+      "keywords": ["symbol", "math", "logic", "comparison"]
+    },
+    {
+      "code": "U+221C",
+      "text": "⋜",
+      "isEmoji": false,
+      "name": "Geometrically Equal To",
+      "keywords": ["symbol", "math", "logic", "geometry"]
+    },
+    {
+      "code": "U+221D",
+      "text": "⋝",
+      "isEmoji": false,
+      "name": "Proportional To",
+      "keywords": ["symbol", "math", "logic", "geometry"]
+    },
+    {
+      "code": "U+221E",
+      "text": "⋞",
+      "isEmoji": false,
+      "name": "Infinity",
+      "keywords": ["symbol", "math", "logic", "calculus"]
+    },
+    {
+      "code": "U+221F",
+      "text": "⋟",
+      "isEmoji": false,
+      "name": "Right Angle",
+      "keywords": ["symbol", "math", "geometry", "engineering"]
+    },
+    {
+      "code": "U+2220",
+      "text": "⋠",
+      "isEmoji": false,
+      "name": "Angle",
+      "keywords": ["symbol", "math", "geometry", "engineering"]
+    },
+    {
+      "code": "U+2221",
+      "text": "⋡",
+      "isEmoji": false,
+      "name": "Measured Angle",
+      "keywords": ["symbol", "math", "geometry", "engineering"]
+    },
+    {
+      "code": "U+2222",
+      "text": "⋢",
+      "isEmoji": false,
+      "name": "Spherical Angle",
+      "keywords": ["symbol", "math", "geometry", "physics"]
+    },
+    {
+      "code": "U+2223",
+      "text": "⋣",
+      "isEmoji": false,
+      "name": "Divides",
+      "keywords": ["symbol", "math", "arithmetic", "logic"]
+    },
+    {
+      "code": "U+2224",
+      "text": "⋤",
+      "isEmoji": false,
+      "name": "Does Not Divide",
+      "keywords": ["symbol", "math", "arithmetic", "logic"]
+    },
+    {
+      "code": "U+2225",
+      "text": "⋥",
+      "isEmoji": false,
+      "name": "Parallel To",
+      "keywords": ["symbol", "math", "geometry", "logic"]
+    },
+    {
+      "code": "U+2226",
+      "text": "⋦",
+      "isEmoji": false,
+      "name": "Not Parallel To",
+      "keywords": ["symbol", "math", "geometry", "logic"]
+    },
+    {
+      "code": "U+2227",
+      "text": "⋧",
+      "isEmoji": false,
+      "name": "Logical And",
+      "keywords": ["symbol", "logic", "math", "boolean"]
+    },
+    {
+      "code": "U+2228",
+      "text": "⋨",
+      "isEmoji": false,
+      "name": "Logical Or",
+      "keywords": ["symbol", "logic", "math", "boolean"]
+    },
+    {
+      "code": "U+2229",
+      "text": "⋩",
+      "isEmoji": false,
+      "name": "Intersection",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+222A",
+      "text": "⋪",
+      "isEmoji": false,
+      "name": "Union",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+222B",
+      "text": "⋫",
+      "isEmoji": false,
+      "name": "Integral",
+      "keywords": ["symbol", "calculus", "math", "physics"]
+    },
+    {
+      "code": "U+222C",
+      "text": "⋬",
+      "isEmoji": false,
+      "name": "Double Integral",
+      "keywords": ["symbol", "calculus", "math", "physics"]
+    },
+    {
+      "code": "U+222D",
+      "text": "⋭",
+      "isEmoji": false,
+      "name": "Triple Integral",
+      "keywords": ["symbol", "calculus", "math", "physics"]
+    },
+    {
+      "code": "U+22EE",
+      "text": "⋮",
+      "isEmoji": false,
+      "name": "Vertical Ellipsis",
+      "keywords": ["symbol", "typography", "math", "list"]
+    },
+    {
+      "code": "U+22EF",
+      "text": "⋯",
+      "isEmoji": false,
+      "name": "Midline Horizontal Ellipsis",
+      "keywords": ["symbol", "typography", "math", "list"]
+    },
+    {
+      "code": "U+22F0",
+      "text": "⋰",
+      "isEmoji": false,
+      "name": "Up Right Diagonal Ellipsis",
+      "keywords": ["symbol", "typography", "math", "list"]
+    },
+    {
+      "code": "U+22F1",
+      "text": "⋱",
+      "isEmoji": false,
+      "name": "Down Right Diagonal Ellipsis",
+      "keywords": ["symbol", "typography", "math", "list"]
+    },
+    {
+      "code": "U+22F2",
+      "text": "⋲",
+      "isEmoji": false,
+      "name": "Element Of With Long Horizontal Stroke",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22F3",
+      "text": "⋳",
+      "isEmoji": false,
+      "name": "Element Of With Vertical Bar At End Of Horizontal Stroke",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22F4",
+      "text": "⋴",
+      "isEmoji": false,
+      "name": "Small Element Of With Vertical Bar At End Of Horizontal Stroke",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22F5",
+      "text": "⋵",
+      "isEmoji": false,
+      "name": "Element Of With Dot Above",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22F6",
+      "text": "⋶",
+      "isEmoji": false,
+      "name": "Element Of With Overbar",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22F7",
+      "text": "⋷",
+      "isEmoji": false,
+      "name": "Small Element Of With Overbar",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22F8",
+      "text": "⋸",
+      "isEmoji": false,
+      "name": "Element Of With Underbar",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22F9",
+      "text": "⋹",
+      "isEmoji": false,
+      "name": "Element Of With Two Horizontal Strokes",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22FA",
+      "text": "⋺",
+      "isEmoji": false,
+      "name": "Contains With Long Horizontal Stroke",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22FB",
+      "text": "⋻",
+      "isEmoji": false,
+      "name": "Contains With Vertical Bar At End Of Horizontal Stroke",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22FC",
+      "text": "⋼",
+      "isEmoji": false,
+      "name": "Small Contains With Vertical Bar At End Of Horizontal Stroke",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22FD",
+      "text": "⋽",
+      "isEmoji": false,
+      "name": "Contains With Overbar",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22FE",
+      "text": "⋾",
+      "isEmoji": false,
+      "name": "Small Contains With Overbar",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    },
+    {
+      "code": "U+22FF",
+      "text": "⋿",
+      "isEmoji": false,
+      "name": "Z Notation Bag Membership",
+      "keywords": ["symbol", "set theory", "math", "logic"]
+    }
   ]
 }
