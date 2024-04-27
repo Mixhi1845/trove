@@ -6,8 +6,18 @@ import { usePathname } from "next/navigation";
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/icons";
+import { LuBox } from "react-icons/lu";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 import {
   NavigationMenu,
@@ -224,9 +234,9 @@ export function MainNav({
   const pathname = usePathname();
 
   return (
-    <div className="mr-4 hidden md:flex">
+    <div className="mr-4 hidden items-center md:flex">
       <Link href="/" className="mr-6 flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
+        <LuBox className="h-6 w-6" />
         <span className="hidden font-bold sm:inline-block">
           {siteConfig.name}
         </span>
@@ -237,15 +247,15 @@ export function MainNav({
         item3={social}
         item4={data}
       />
-      <nav className="flex items-center gap-4 text-sm lg:gap-6">
-        <Separator className="ml-2 mr-1 h-4" orientation="vertical" />
+      <Separator className="ml-2 mr-1 h-4" orientation="vertical" />
+      <nav className="xl:flex items-center gap-4 text-sm lg:gap-6 hidden">
         <Link
           href="/changelog"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/es/changelog") ||
-              pathname?.startsWith("/en/changelog") ||
-              pathname?.startsWith("/de/changelog")
+            pathname?.startsWith("/en/changelog") ||
+              pathname?.startsWith("/de/aenderungen") ||
+              pathname?.startsWith("/es/registro-de-cambios")
               ? "text-foreground"
               : "text-foreground/60"
           )}
@@ -256,7 +266,9 @@ export function MainNav({
           href="/about"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/about")
+            pathname?.startsWith("/en/about") ||
+              pathname?.startsWith("/de/ueber") ||
+              pathname?.startsWith("/es/acerca-de")
               ? "text-foreground"
               : "text-foreground/60"
           )}
@@ -267,7 +279,9 @@ export function MainNav({
           href="/contact"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/contact")
+            pathname?.startsWith("/en/contact") ||
+              pathname?.startsWith("/de/kontakt") ||
+              pathname?.startsWith("/es/contacto")
               ? "text-foreground"
               : "text-foreground/60"
           )}
@@ -275,6 +289,22 @@ export function MainNav({
           {contact}
         </Link>
       </nav>
+      <DropdownMenu>
+        <DropdownMenuTrigger className="text-sm hidden md:flex xl:hidden transition-colors hover:text-foreground/80 text-foreground/60">
+          About
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuItem>
+            <Link href="/changelog">Changelog</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/about">About us</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/contact">Contact</Link>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 }

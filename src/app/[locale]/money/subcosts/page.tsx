@@ -1,10 +1,10 @@
 import PageLayout from "@/components/page-layout";
-import EmojiWiki from "@/components/tool-components/emojis";
+import Services from "@/components/tool-components/services";
 
 export default function Page() {
   return (
-    <PageLayout title="Emojis">
-      <EmojiWiki />
+    <PageLayout title="Subscription Costs">
+      <Services />
     </PageLayout>
   );
 }

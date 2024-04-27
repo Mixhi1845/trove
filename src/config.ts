@@ -10,30 +10,20 @@ export const locales = ['en', 'de', 'es'] as const;
 
 export const pathnames = {
   '/': '/',
-  '/discover': {
-    en: '/discover',
-    de: '/entdecken',
-    es: '/descubrir'
-  },
-  '/data/countries': {
-      en: '/data/countries',
-      de: '/daten/länder',
-      es: '/datos/paises'
-    },
-  '/data/states': {
-      en: '/data/states',
-      de: '/daten/bundesländer',
-      es: '/datos/estados'
-    },
-  '/data/cities': {
-      en: '/data/cities',
-      de: '/daten/städte',
-      es: '/datos/ciudades'
-    },
   '/changelog': {
-      en: '/changelog',
-      de: '/changelog',
-      es: '/changelog'
+    en: '/changelog',
+    de: '/aenderungen',
+    es: '/registro-de-cambios'
+  },
+  '/about': {
+    en: '/about',
+    de: '/ueber',
+    es: '/acerca-de'
+  },
+  '/contact': {
+    en: '/contact',
+    de: '/kontakt',
+    es: '/contacto'
   }
 } satisfies Pathnames<typeof locales>;
 

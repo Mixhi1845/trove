@@ -10,7 +10,7 @@ import {
   PageHeaderHeading,
 } from "@/components/page-hero";
 import { buttonVariants } from "@/components/ui/button";
-import CategoryOverviewPopular from "@/components/categories/category-overview-popular";
+import CategoryOverview from "@/components/tool-components/category-overview";
 
 export default function IndexPage() {
   const t = useTranslations("Index");
@@ -33,7 +33,7 @@ export default function IndexPage() {
           </Link>
         </PageActions>
       </PageHeader>
-      <CategoryOverviewPopular />
+      <CategoryOverview />
     </div>
   );
 }

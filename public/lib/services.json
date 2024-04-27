@@ -1,0 +1,437 @@
+{
+  "categories": [
+    {
+      "name": "TV",
+      "services": [
+        {
+          "name": "Netflix",
+          "plans": [
+            {
+              "name": "Basic",
+              "price": 8
+            },
+            {
+              "name": "Standard",
+              "price": 10
+            },
+            {
+              "name": "Premium",
+              "price": 12
+            }
+          ],
+          "trial": "30 days"
+        },
+        {
+          "name": "HBO GO",
+          "plans": [
+            {
+              "name": "Standard",
+              "price": 6
+            }
+          ],
+          "trial": "7 days"
+        },
+        {
+          "name": "Apple TV+",
+          "plans": [
+            {
+              "name": "Standard",
+              "price": 5
+            }
+          ],
+          "trial": "5 days"
+        },
+        {
+          "name": "YouTube Premium",
+          "plans": [
+            {
+              "name": "Premium",
+              "price": 11
+            },
+            {
+              "name": "Family Plan (5 members)",
+              "price": 16
+            }
+          ],
+          "trial": "30 days"
+        }
+      ]
+    },
+    {
+      "name": "Music",
+      "services": [
+        {
+          "name": "Spotify",
+          "plans": [
+            {
+              "name": "Individual",
+              "price": 6
+            },
+            {
+              "name": "Premium Duo",
+              "price": 8
+            },
+            {
+              "name": "Family",
+              "price": 10
+            }
+          ],
+          "trial": "30 days"
+        },
+        {
+          "name": "Deezer",
+          "plans": [
+            {
+              "name": "Premium",
+              "price": 7
+            },
+            {
+              "name": "Family",
+              "price": 12
+            }
+          ],
+          "trial": "90 days"
+        },
+        {
+          "name": "Amazon Prime",
+          "plans": [
+            {
+              "name": "Prime Video",
+              "price": 8
+            },
+            {
+              "name": "Prime Monthly",
+              "price": 13
+            },
+            {
+              "name": "Prime Annual",
+              "price": 103
+            }
+          ],
+          "trial": "Free Plan - Amazon"
+        }
+      ]
+    },
+    {
+      "name": "Cloud",
+      "services": [
+        {
+          "name": "Dropbox",
+          "plans": [
+            {
+              "name": "Professional",
+              "price": 20
+            },
+            {
+              "name": "Standard",
+              "price": 12
+            },
+            {
+              "name": "Advanced",
+              "price": 18
+            },
+            {
+              "name": "Plus",
+              "price": 10
+            },
+            {
+              "name": "Professional",
+              "price": 17
+            }
+          ],
+          "trial": "14-30 days - depends on plan"
+        },
+        {
+          "name": "Apple iCloud",
+          "plans": [
+            {
+              "name": "50GB",
+              "price": 1
+            },
+            {
+              "name": "200GB",
+              "price": 3
+            },
+            {
+              "name": "2TB",
+              "price": 10
+            }
+          ],
+          "trial": "5GB of free storage"
+        },
+        {
+          "name": "Google One",
+          "plans": [
+            {
+              "name": "100 GB",
+              "price": {
+                "yearly": 20,
+                "monthly": 4
+              }
+            },
+            {
+              "name": "200 GB",
+              "price": {
+                "yearly": 34,
+                "monthly": 5
+              }
+            },
+            {
+              "name": "2 TB",
+              "price": {
+                "yearly": 118,
+                "monthly": 12
+              }
+            },
+            {
+              "name": "10 TB",
+              "price": {
+                "monthly": 55
+              }
+            },
+            {
+              "name": "20 TB",
+              "price": {
+                "monthly": 108
+              }
+            },
+            {
+              "name": "30 TB",
+              "price": {
+                "monthly": 162
+              }
+            }
+          ],
+          "trial": "100 GB free with activation code for 6 months"
+        },
+        {
+          "name": "GSuite",
+          "plans": [
+            {
+              "name": "Basic",
+              "price": 7
+            },
+            {
+              "name": "Business",
+              "price": 12
+            },
+            {
+              "name": "Enterprise",
+              "price": 23
+            }
+          ],
+          "trial": "14 days"
+        },
+        {
+          "name": "Amazon photo storage",
+          "plans": [
+            {
+              "name": "Amazon photo storage",
+              "price": 1.5
+            }
+          ],
+          "trial": "None"
+        }
+      ]
+    },
+    {
+      "name": "Education, Entertainment",
+      "services": [
+        {
+          "name": "Audible",
+          "plans": [
+            {
+              "name": "Audible",
+              "price": 10
+            }
+          ],
+          "trial": "30 days"
+        },
+        {
+          "name": "Masterclass",
+          "plans": [
+            {
+              "name": "All-Access Pass",
+              "price": 155
+            }
+          ],
+          "trial": "1 day (24 hours)"
+        }
+      ]
+    },
+    {
+      "name": "Password Manager",
+      "services": [
+        {
+          "name": "One Password",
+          "plans": [
+            {
+              "name": "1password",
+              "price": 4
+            },
+            {
+              "name": "1password families (5 members)",
+              "price": 6
+            },
+            {
+              "name": "Teams",
+              "price": 5
+            },
+            {
+              "name": "Business",
+              "price": 8
+            },
+            {
+              "name": "Enterprise",
+              "price": "custom"
+            }
+          ],
+          "trial": "30 days"
+        },
+        {
+          "name": "LastPass Premium",
+          "plans": [
+            {
+              "name": "Premium",
+              "price": 3
+            },
+            {
+              "name": "Families",
+              "price": 4
+            }
+          ],
+          "trial": "30 days"
+        }
+      ]
+    },
+    {
+      "name": "Graphic Design, Photo, Video",
+      "services": [
+        {
+          "name": "Adobe Creative Cloud",
+          "plans": [
+            {
+              "name": "Photography",
+              "price": 10
+            },
+            {
+              "name": "All Apps",
+              "price": 60
+            },
+            {
+              "name": "Photoshop",
+              "price": 25
+            },
+            {
+              "name": "Illustrator",
+              "price": 25
+            },
+            {
+              "name": "InDesign",
+              "price": 25
+            },
+            {
+              "name": "Adobe XD",
+              "price": 12
+            },
+            {
+              "name": "Lightroom plan with 1 TB",
+              "price": 12
+            },
+            {
+              "name": "Acrobat Pro",
+              "price": 19
+            },
+            {
+              "name": "Dreamweaver",
+              "price": 25
+            },
+            {
+              "name": "Animate",
+              "price": 25
+            },
+            {
+              "name": "Premiere Pro",
+              "price": 25
+            },
+            {
+              "name": "Premiere Rush",
+              "price": 13
+            },
+            {
+              "name": "After Effects",
+              "price": 25
+            },
+            {
+              "name": "Spark",
+              "price": 13
+            },
+            {
+              "name": "Dimension",
+              "price": 25
+            },
+            {
+              "name": "Audition",
+              "price": 25
+            },
+            {
+              "name": "InCopy",
+              "price": 7
+            }
+          ],
+          "business": {
+            "all_apps": 70,
+            "single_app": 30
+          },
+          "education": {
+            "all_apps_students_teachers": 20,
+            "all_apps_schools_universities": 35,
+            "single_app_schools_universities": 15
+          },
+          "trial": "7 days"
+        }
+      ]
+    },
+    {
+      "name": "Gaming",
+      "services": [
+        {
+          "name": "Twitch Prime",
+          "plans": [
+            {
+              "name": "Tier 1",
+              "price": 6
+            },
+            {
+              "name": "Tier 2",
+              "price": 10
+            },
+            {
+              "name": "Tier 3",
+              "price": 23
+            }
+          ],
+          "trial": "30 days"
+        },
+        {
+          "name": "PlayStation Now",
+          "plans": [
+            {
+              "name": "1 month",
+              "price": 10
+            },
+            {
+              "name": "3 months",
+              "price": 23
+            },
+            {
+              "name": "12 months",
+              "price": 52
+            }
+          ],
+          "trial": "7 days"
+        }
+      ]
+    }
+  ]
+}
