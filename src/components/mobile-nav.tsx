@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
-import { RxViewVertical } from "react-icons/rx";
+import { Badge } from "@/components/ui/badge";
 
 import { commandsConfig } from "@/config/commands";
 import { siteConfig } from "@/config/site";
@@ -65,19 +65,37 @@ export function MobileNav() {
           <span className="font-bold">{siteConfig.name}</span>
         </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-          <div className="flex flex-col space-y-3">
-            {commandsConfig.mainNav?.map(
-              (item) =>
-                item.href && (
-                  <MobileLink
-                    key={item.href}
-                    href={item.href}
-                    onOpenChange={setOpen}
-                  >
-                    {item.title}
-                  </MobileLink>
-                )
-            )}
+          <div className="flex flex-col space-y-2">
+            {commandsConfig.mainNav.map((item, index) => (
+              <div key={index} className="flex flex-col space-y-3 pt-6">
+                <h4 className="font-medium">{item.title}</h4>
+                {item?.items?.length &&
+                  item.items.map((item) => (
+                    <React.Fragment key={item.href}>
+                      {!item.disabled &&
+                        (item.href ? (
+                          <MobileLink
+                            href={item.href}
+                            onOpenChange={setOpen}
+                            className="text-muted-foreground"
+                          >
+                            {item.title}
+                            {item.label && (
+                              <Badge
+                                variant="outline"
+                                className="ml-2 text-xs text-muted-foreground"
+                              >
+                                {item.label}
+                              </Badge>
+                            )}
+                          </MobileLink>
+                        ) : (
+                          item.title
+                        ))}
+                    </React.Fragment>
+                  ))}
+              </div>
+            ))}
           </div>
           <div className="flex flex-col space-y-2">
             {commandsConfig.sidebarNav.map((item, index) => (

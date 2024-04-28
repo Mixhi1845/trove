@@ -8,19 +8,21 @@ interface Description {
   title: string;
   className?: string;
   children: ReactNode;
+  isTool?: boolean;
 }
 
 export default function ToolDescription({
   title,
   children,
   className,
+  isTool = true,
 }: Description) {
   return (
     <Card className={cn("mb-4 lg:max-w-3xl", className)}>
       <CardHeader>
         <CardTitle className="flex justify-between items-center">
           {title}
-          <ScrollToToolLink />
+          {isTool && <ScrollToToolLink />}
         </CardTitle>
       </CardHeader>
       <CardContent className="prose">{children}</CardContent>

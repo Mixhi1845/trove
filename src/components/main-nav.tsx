@@ -91,7 +91,7 @@ const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
             <div className="text-sm font-medium leading-none">
               {title}
               {label && (
-                <Badge className="ml-2" variant="outline">
+                <Badge className="ml-2 text-xs" variant="outline">
                   {label}
                 </Badge>
               )}

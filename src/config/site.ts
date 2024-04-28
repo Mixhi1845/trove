@@ -6,6 +6,7 @@ export const siteConfig = {
       "Informative graphs that you can help you understand the world. Accessible. Customizable. Open Source.",
     links: {
       github: "https://github.com/Mixhi1845/trove",
+      api: "https://api.github.com/repos/Mixhi1845/trove"
     },
   }
   

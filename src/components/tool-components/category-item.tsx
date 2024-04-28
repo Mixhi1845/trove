@@ -19,7 +19,7 @@ export default function CategoryItem({ badge, route, toolname }: Props) {
         {toolname}
         {badge && (
           <Badge
-            className="ml-2 text-muted-foreground transition-colors group-hover:text-foreground/80"
+            className="ml-2 text-xs text-muted-foreground transition-colors group-hover:text-foreground/80"
             variant="outline"
           >
             {badge}

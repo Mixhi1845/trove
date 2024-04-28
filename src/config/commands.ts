@@ -23,7 +23,7 @@ export const commandsConfig: CommandsConfig = {
           href: "/productivity/pomodoro",
           desc: "Helps to improve productivity by breaking work into focused 25-minute intervals separated by short breaks.",
           items: [],
-        },        
+        },
 
       ],
     },
@@ -39,10 +39,10 @@ export const commandsConfig: CommandsConfig = {
         },
         {
           title: "Streaming Costs",
-          href: "/money/subcosts",
+          href: "/money/sub-costs",
           label: "Calculator",
           items: [],
-        },        
+        },
       ],
     },
     {
@@ -51,14 +51,14 @@ export const commandsConfig: CommandsConfig = {
       items: [
         {
           title: "URL Shortener",
-          href: "/socials/shorturl",
+          href: "/socials/short-url",
           items: [],
         },
         {
           title: "Quotes",
           href: "/socials/quotes",
           items: [],
-        },        
+        },
       ],
     },
     {
