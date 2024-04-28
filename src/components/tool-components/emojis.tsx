@@ -68,7 +68,7 @@ const SymbolPage = () => {
     value !== "" && symbols[value] ? { [value]: symbols[value] } : symbols;
 
   return (
-    <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
+    <div id="tool" className="grid grid-cols-1 gap-4 xl:grid-cols-2">
       {Object.keys(filteredSymbols).map((category) => (
         <Card key={category}>
           <CardHeader>

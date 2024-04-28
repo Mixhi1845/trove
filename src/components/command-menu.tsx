@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { DialogProps } from "@radix-ui/react-alert-dialog";
-import { RxCircle, RxFile, RxLaptop, RxMoon, RxSun } from "react-icons/rx";
+import { LuCircle, LuLaptop, LuMoon, LuSun } from "react-icons/lu";
 import { useTheme } from "next-themes";
 
 import { commandsConfig } from "@/config/commands";
@@ -89,10 +89,9 @@ export function CommandMenu({
         <CommandInput placeholder={placeholdertext} />
         <CommandList>
           <CommandEmpty>{empty}</CommandEmpty>
-          <CommandGroup heading="Tools">
-            {commandsConfig.mainNav
-              .filter((navitem) => !navitem.external)
-              .map((navItem) => (
+          {commandsConfig.mainNav.map((group) => (
+            <CommandGroup key={group.title} heading={group.title}>
+              {group.items.map((navItem) => (
                 <CommandItem
                   key={navItem.href}
                   value={navItem.title}
@@ -100,11 +99,14 @@ export function CommandMenu({
                     runCommand(() => router.push(navItem.href as string));
                   }}
                 >
-                  <RxFile className="mr-2 h-4 w-4" />
+                  <div className="mr-2 flex h-4 w-4 items-center justify-center">
+                    <LuCircle className="h-3 w-3" />
+                  </div>
                   {navItem.title}
                 </CommandItem>
               ))}
-          </CommandGroup>
+            </CommandGroup>
+          ))}
           {commandsConfig.sidebarNav.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
               {group.items.map((navItem) => (
@@ -116,7 +118,7 @@ export function CommandMenu({
                   }}
                 >
                   <div className="mr-2 flex h-4 w-4 items-center justify-center">
-                    <RxCircle className="h-3 w-3" />
+                    <LuCircle className="h-3 w-3" />
                   </div>
                   {navItem.title}
                 </CommandItem>
@@ -126,15 +128,15 @@ export function CommandMenu({
           <CommandSeparator />
           <CommandGroup heading="Theme">
             <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
-              <RxSun className="mr-2 h-4 w-4" />
+              <LuSun className="mr-2 h-4 w-4" />
               {light}
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme("dark"))}>
-              <RxMoon className="mr-2 h-4 w-4" />
+              <LuMoon className="mr-2 h-4 w-4" />
               {dark}
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
-              <RxLaptop className="mr-2 h-4 w-4" />
+              <LuLaptop className="mr-2 h-4 w-4" />
               {system}
             </CommandItem>
           </CommandGroup>

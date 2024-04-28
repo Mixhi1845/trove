@@ -8,14 +8,86 @@ interface CommandsConfig {
 export const commandsConfig: CommandsConfig = {
   mainNav: [
     {
-      title: "Grade Calculator",
-      href: "/explore",
+      title: "Productivity",
+      href:"",
+      items: [
+        {
+          title: "Grade Calculator",
+          href: "/productivity/grades",
+          label: "Calculator",
+          desc: "Allows students to calculate and track their overall Graduation grade.",
+          items: [],
+        },
+        {
+          title: "Pomodoro Timer",
+          href: "/productivity/pomodoro",
+          desc: "Helps to improve productivity by breaking work into focused 25-minute intervals separated by short breaks.",
+          items: [],
+        },        
+
+      ],
+    },
+    {
+      title: "Money",
+      href:"",
+      items: [
+        {
+          title: "Exchange Rates",
+          href: "/money/money-exchange",
+          label: "Calculator",
+          items: [],
+        },
+        {
+          title: "Streaming Costs",
+          href: "/money/subcosts",
+          label: "Calculator",
+          items: [],
+        },        
+      ],
+    },
+    {
+      title: "Socials",
+      href:"",
+      items: [
+        {
+          title: "URL Shortener",
+          href: "/socials/shorturl",
+          items: [],
+        },
+        {
+          title: "Quotes",
+          href: "/socials/quotes",
+          items: [],
+        },        
+      ],
+    },
+    {
+      title: "Data",
+      href:"",
+      items: [
+        {
+          title: "Scientific Symbols",
+          href: "/data/symbols",
+          items: [],
+        },
+        {
+          title: "Profile Data Faker",
+          href: "/data/profile-faker",
+          items: [],
+        },        
+        {
+          title: "Emoji Wiki",
+          href: "/data/emojis",
+          items: [],
+        },
+      ],
     },
 
   ],
   sidebarNav: [
     {
       title: "Resources",
+      href:"",
       items: [
         {
           title: "About us",
@@ -35,16 +107,12 @@ export const commandsConfig: CommandsConfig = {
       ],
     },
     {
-      title: "Sources",
+      title: "Source Code",
+      href:"",
       items: [
         {
           title: "GitHub",
           href: "https://github.com/Mixhi1845/trove",
-          items: [],
-        },
-        {
-          title: "shadcn/ui",
-          href: "https://github.com/shadcn/ui",
           items: [],
         }
       ],

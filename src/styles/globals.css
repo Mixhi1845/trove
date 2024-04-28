@@ -66,6 +66,41 @@
   }
 }
 
+.prose p:first-child {
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+.prose p:not(:first-child):not(:last-child) {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p:last-child {
+  margin-top: 1.25rem;
+}
+
+.prose strong {
+  font-weight: 500;
+}
+
+.prose a Link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 0.1em;
+}
+
+.prose ol {
+  margin-left: 1.5rem;
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+
+.prose ul {
+  margin-left: 1.5rem;
+  list-style-position: outside;
+  list-style-type: disc;
+}
+
 @layer base {
   * {
     @apply border-border;

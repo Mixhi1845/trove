@@ -87,7 +87,7 @@ const PomodoroTimer: React.FC<PomodoroTimerProps> = ({
     switchMode,
   ]);
   return (
-    <section>
+    <section id="tool">
       <audio ref={audioRef} src="/notification.mp3" preload="auto" />
       <div className="grid gap-4">
         <Card>
@@ -130,7 +130,7 @@ const PomodoroTimer: React.FC<PomodoroTimerProps> = ({
             <CardContent>
               <div className="grid grid-cols-3 gap-4 mb-4">
                 <Button
-                  className={`text-foreground hover:bg-muted/80 ${
+                  className={`text-foreground hover:bg-destructive/80 ${
                     isRunning ? "bg-destructive " : "bg-muted"
                   }`}
                   onClick={isRunning ? stopTimer : startTimer}

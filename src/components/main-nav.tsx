@@ -6,9 +6,10 @@ import { usePathname } from "next/navigation";
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { commandsConfig } from "@/config/commands";
 import { LuBox } from "react-icons/lu";
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 import {
   DropdownMenu,
@@ -38,188 +39,72 @@ interface MainNavProps {
   contact: string;
 }
 
-interface ToolMenuProps {
-  item1: string;
-  item2: string;
-  item3: string;
-  item4: string;
-}
-
-const productivity_items: {
-  title: string;
-  href: string;
-  description: string;
-}[] = [
-  {
-    title: "Grade Calculator",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Pomodoro Timer",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-];
-
-const money_items: { title: string; href: string; description: string }[] = [
-  {
-    title: "Exchange Rates",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Streaming Cost Calculator",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-];
-
-const socials_items: { title: string; href: string; description: string }[] = [
-  {
-    title: "URL Shortener",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Quotes",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-];
-
-const data_items: { title: string; href: string; description: string }[] = [
-  {
-    title: "Emoji Wiki",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Scientific Symbols",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Data Faker",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-];
-
-function ToolMenu({ item1, item2, item3, item4 }: ToolMenuProps) {
+function ToolMenu() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-normal px-2 lg:px-3 text-muted-foreground">
-            {item1}
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {productivity_items.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-normal px-2 lg:px-3 text-muted-foreground">
-            {item2}
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {money_items.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-normal px-2 lg:px-3 text-muted-foreground">
-            {item3}
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {socials_items.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-normal px-2 lg:px-3 text-muted-foreground">
-            {item4}
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {data_items.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+        {commandsConfig.mainNav.map((group) => (
+          <NavigationMenuItem key={group.title}>
+            <NavigationMenuTrigger className="font-normal px-2 lg:px-3 text-muted-foreground">
+              {group.title}
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                {group.items.map((navItem) => (
+                  <ListItem
+                    key={navItem.href}
+                    title={navItem.title}
+                    href={navItem.href}
+                    label={navItem.label}
+                  >
+                    {navItem.desc}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        ))}
       </NavigationMenuList>
     </NavigationMenu>
   );
 }
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
+interface ListItemProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  title: string;
+  label?: string;
+  children: React.ReactNode;
+}
+
+const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
+  ({ className, title, label, children, ...props }, ref) => {
+    return (
+      <li>
+        <NavigationMenuLink asChild>
+          <a
+            ref={ref}
+            className={cn(
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            {...props}
+          >
+            <div className="text-sm font-medium leading-none">
+              {title}
+              {label && (
+                <Badge className="ml-2" variant="outline">
+                  {label}
+                </Badge>
+              )}
+            </div>
+            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+              {children}
+            </p>
+          </a>
+        </NavigationMenuLink>
+      </li>
+    );
+  }
+);
 ListItem.displayName = "ListItem";
 
 export function MainNav({
@@ -241,13 +126,8 @@ export function MainNav({
           {siteConfig.name}
         </span>
       </Link>
-      <ToolMenu
-        item1={productivity}
-        item2={money}
-        item3={social}
-        item4={data}
-      />
-      <Separator className="ml-2 mr-1 h-4" orientation="vertical" />
+      <ToolMenu />
+      <Separator className="ml-2 mr-4 h-4" orientation="vertical" />
       <nav className="xl:flex items-center gap-4 text-sm lg:gap-6 hidden">
         <Link
           href="/changelog"
@@ -291,17 +171,17 @@ export function MainNav({
       </nav>
       <DropdownMenu>
         <DropdownMenuTrigger className="text-sm hidden md:flex xl:hidden transition-colors hover:text-foreground/80 text-foreground/60">
-          About
+          {about}
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuItem>
-            <Link href="/changelog">Changelog</Link>
+            <Link href="/changelog">{changelog}</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="/about">About us</Link>
+            <Link href="/about">{about}</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact">{contact}</Link>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

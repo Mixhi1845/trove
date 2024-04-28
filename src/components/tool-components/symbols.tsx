@@ -57,7 +57,7 @@ const ScientificSymbols = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
+    <div id="tool" className="grid grid-cols-1 gap-4 xl:grid-cols-2">
       {Object.keys(symbols).map((category) => (
         <Card key={category}>
           <CardHeader>

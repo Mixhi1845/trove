@@ -38,25 +38,12 @@ const ProfileFaker = () => {
   );
   const [city, setCity] = useState(fakerEN.location.city());
   const [state, setState] = useState(fakerEN.location.state());
-  const [country, setCountry] = useState(fakerEN.location.country());
+  const [country, setCountry] = useState("USA");
   const [imageUrl, setImageUrl] = useState(fakerEN.image.url());
   const [avatarUrl, setAvatarUrl] = useState(fakerEN.image.avatar());
 
   const handleCopyToClipboard = (text: string) => {
     copy(text);
-  };
-
-  const handleReload = () => {
-    setFullName(fakerEN.person.fullName());
-    setUserName(fakerEN.internet.userName());
-    setBio(fakerEN.person.bio());
-    setPhoneNumber(fakerEN.phone.number());
-    setStreetAddress(fakerEN.location.streetAddress());
-    setCity(fakerEN.location.city());
-    setState(fakerEN.location.state());
-    setCountry(fakerEN.location.country());
-    setImageUrl(fakerEN.image.url());
-    setAvatarUrl(fakerEN.image.avatar());
   };
 
   const handleLanguageSwitch = (locale: string) => {
@@ -69,7 +56,7 @@ const ProfileFaker = () => {
         setStreetAddress(fakerEN.location.streetAddress());
         setCity(fakerEN.location.city());
         setState(fakerEN.location.state());
-        setCountry(fakerEN.location.country());
+        setCountry("USA");
         setImageUrl(fakerEN.image.url());
         setAvatarUrl(fakerEN.image.avatar());
         break;
@@ -81,7 +68,7 @@ const ProfileFaker = () => {
         setStreetAddress(fakerDE.location.streetAddress());
         setCity(fakerDE.location.city());
         setState(fakerDE.location.state());
-        setCountry(fakerDE.location.country());
+        setCountry("Germany");
         setImageUrl(fakerDE.image.url());
         setAvatarUrl(fakerDE.image.avatar());
         break;
@@ -93,7 +80,7 @@ const ProfileFaker = () => {
         setStreetAddress(fakerES.location.streetAddress());
         setCity(fakerES.location.city());
         setState(fakerES.location.state());
-        setCountry(fakerES.location.country());
+        setCountry("Spain");
         setImageUrl(fakerES.image.url());
         setAvatarUrl(fakerES.image.avatar());
         break;
@@ -105,7 +92,7 @@ const ProfileFaker = () => {
         setStreetAddress(fakerEN_GB.location.streetAddress());
         setCity(fakerEN_GB.location.city());
         setState(fakerEN_GB.location.state());
-        setCountry(fakerEN_GB.location.country());
+        setCountry("Great Britain");
         setImageUrl(fakerEN_GB.image.url());
         setAvatarUrl(fakerEN_GB.image.avatar());
         break;
@@ -117,7 +104,7 @@ const ProfileFaker = () => {
         setStreetAddress(fakerUK.location.streetAddress());
         setCity(fakerUK.location.city());
         setState(fakerUK.location.state());
-        setCountry(fakerUK.location.country());
+        setCountry("Ukraine");
         setImageUrl(fakerUK.image.url());
         setAvatarUrl(fakerUK.image.avatar());
         break;
@@ -125,7 +112,10 @@ const ProfileFaker = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:grid-rows-2">
+    <div
+      id="tool"
+      className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:grid-rows-2"
+    >
       <Card className="row-span-2">
         <CardContent className="pt-6 grid  gap-4">
           <div className="bg-background rounded-lg border p-4">
@@ -306,7 +296,7 @@ const ProfileFaker = () => {
 
           <Button
             variant="outline"
-            className="px-2 py-1 h-8 mr-4"
+            className="px-2 py-1 h-8 mb-2 mr-2"
             onClick={() => handleCopyToClipboard(avatarUrl)}
           >
             <FaImage className="text-muted-foreground mr-4"></FaImage> Copy
@@ -314,7 +304,7 @@ const ProfileFaker = () => {
           </Button>
           <Button
             variant="outline"
-            className="px-2 py-1 h-8 mr-4"
+            className="px-2 py-1 h-8 my-2 mx-2"
             onClick={() => handleCopyToClipboard(imageUrl)}
           >
             <FaImage className="text-muted-foreground mr-4"></FaImage> Copy
@@ -322,7 +312,7 @@ const ProfileFaker = () => {
           </Button>
           <Button
             variant="outline"
-            className="px-2 py-1 h-8"
+            className="px-2 py-1 h-8 ml-2"
             onClick={() => handleCopyToClipboard(bio)}
           >
             <FaImage className="text-muted-foreground mr-4"></FaImage> Copy
