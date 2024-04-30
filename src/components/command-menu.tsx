@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import { DialogProps } from "@radix-ui/react-alert-dialog";
 import { LuCircle, LuLaptop, LuMoon, LuSun } from "react-icons/lu";
 import { useTheme } from "next-themes";
-
-import { commandsConfig } from "@/config/commands";
+import copy from "copy-to-clipboard";
+import { pathsConfig } from "@/config/paths";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -29,6 +29,20 @@ interface CommandMenuProps extends DialogProps {
   system: string;
 }
 
+interface SymbolData {
+  [category: string]: {
+    code: string;
+    text: string;
+    isEmoji: boolean;
+    name: string;
+    keywords: string[];
+  }[];
+}
+
+interface SymbolsDataCategory {
+  [category: string]: number | null;
+}
+
 export function CommandMenu({
   buttonsm,
   buttonlg,
@@ -39,6 +53,24 @@ export function CommandMenu({
   system,
   ...dialogProps
 }: CommandMenuProps) {
+  const [symbols, setSymbols] = React.useState<SymbolData>({});
+
+  React.useEffect(() => {
+    fetch("/lib/symbols.json")
+      .then((response) => response.json())
+      .then((data: SymbolData) => {
+        setSymbols(data);
+
+        const scientificSymbols: SymbolsDataCategory = {};
+        Object.keys(data).forEach((category) => {
+          scientificSymbols[category] = null;
+        });
+      })
+      .catch((error) => {
+        console.error("Error fetching symbols:", error);
+      });
+  }, []);
+
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const { setTheme } = useTheme();
@@ -89,7 +121,7 @@ export function CommandMenu({
         <CommandInput placeholder={placeholdertext} />
         <CommandList>
           <CommandEmpty>{empty}</CommandEmpty>
-          {commandsConfig.mainNav.map((group) => (
+          {pathsConfig.mainNav.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
               {group.items.map((navItem) => (
                 <CommandItem
@@ -107,7 +139,7 @@ export function CommandMenu({
               ))}
             </CommandGroup>
           ))}
-          {commandsConfig.sidebarNav.map((group) => (
+          {pathsConfig.sidebarNav.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
               {group.items.map((navItem) => (
                 <CommandItem
@@ -140,6 +172,25 @@ export function CommandMenu({
               {system}
             </CommandItem>
           </CommandGroup>
+          <CommandSeparator />
+          {Object.keys(symbols).map((category) => (
+            <CommandGroup key={category} heading={category}>
+              {symbols[category].map((symbol, index: number) => (
+                <CommandItem
+                  key={index}
+                  value={symbol.name}
+                  onSelect={() => {
+                    runCommand(() => copy(symbol.text));
+                  }}
+                >
+                  <div className="mr-2 flex h-4 w-4 items-center justify-center">
+                    {symbol.text}
+                  </div>
+                  {symbol.name}
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          ))}
         </CommandList>
       </CommandDialog>
     </>

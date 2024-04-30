@@ -5,7 +5,7 @@ import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 
-import { commandsConfig } from "@/config/commands";
+import { pathsConfig } from "@/config/paths";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { LuBox } from "react-icons/lu";
@@ -66,7 +66,7 @@ export function MobileNav() {
         </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-2">
-            {commandsConfig.mainNav.map((item, index) => (
+            {pathsConfig.mainNav.map((item, index) => (
               <div key={index} className="flex flex-col space-y-3 pt-6">
                 <h4 className="font-medium">{item.title}</h4>
                 {item?.items?.length &&
@@ -98,7 +98,7 @@ export function MobileNav() {
             ))}
           </div>
           <div className="flex flex-col space-y-2">
-            {commandsConfig.sidebarNav.map((item, index) => (
+            {pathsConfig.sidebarNav.map((item, index) => (
               <div key={index} className="flex flex-col space-y-3 pt-6">
                 <h4 className="font-medium">{item.title}</h4>
                 {item?.items?.length &&

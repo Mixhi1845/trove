@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { commandsConfig } from "@/config/commands";
+import { pathsConfig } from "@/config/paths";
 import { LuBox } from "react-icons/lu";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
@@ -43,7 +43,7 @@ function ToolMenu() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        {commandsConfig.mainNav.map((group) => (
+        {pathsConfig.mainNav.map((group) => (
           <NavigationMenuItem key={group.title}>
             <NavigationMenuTrigger className="font-normal px-2 lg:px-3 text-muted-foreground">
               {group.title}

@@ -163,7 +163,7 @@ const ProfileFaker = () => {
             </div>
           </div>
 
-          <div className="bg-foreground dark:bg-gray-800 rounded-lg shadow">
+          <div className="bg-gray-800 rounded-lg shadow">
             <div className="relative">
               <img
                 src={imageUrl}
@@ -175,7 +175,7 @@ const ProfileFaker = () => {
                   <img
                     src={avatarUrl}
                     alt={`Avatar image of ${avatarUrl}`}
-                    className="w-20 h-20 rounded-full border-4 border-white dark:border-gray-800"
+                    className="w-20 h-20 rounded-full border-4 border-gray-800"
                   />
                   <div className="flex-1">
                     <h2 className="text-white font-bold text-lg">{fullName}</h2>
@@ -185,12 +185,12 @@ const ProfileFaker = () => {
               </div>
             </div>
             <div className="px-4 py-4">
-              <p className="text-gray-700 dark:text-gray-300">{bio}</p>
+              <p className="text-gray-300">{bio}</p>
               <div className="flex items-center space-x-4 mt-4">
                 <div className="flex items-center space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-gray-500 dark:text-gray-400"
+                    className="h-5 w-5 text-gray-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -208,14 +208,14 @@ const ProfileFaker = () => {
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  <span className="text-gray-700 dark:text-gray-300">
+                  <span className="text-gray-300">
                     {city}, {country}
                   </span>
                 </div>
                 <div className="flex items-center space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-gray-500 dark:text-gray-400"
+                    className="h-5 w-5 text-gray-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -227,7 +227,7 @@ const ProfileFaker = () => {
                       d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                     />
                   </svg>
-                  <span className="text-gray-700 dark:text-gray-300">
+                  <span className="text-gray-300">
                     Joined April{" "}
                     <RandomNumber maxValue={2024} minValue={2005} />
                   </span>

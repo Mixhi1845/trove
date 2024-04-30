@@ -1,8 +1,8 @@
 import { siteConfig } from "@/config/site";
-import { commandsConfig } from "@/config/commands";
+import { pathsConfig } from "@/config/paths";
 
 export default async function sitemap() {
-  let tools = commandsConfig.mainNav.flatMap((navItem) =>
+  let tools = pathsConfig.mainNav.flatMap((navItem) =>
     navItem.items.map((item) => ({
       url: `${siteConfig.url}${item.href}`,
       lastModified: new Date().toISOString().split('T')[0],
