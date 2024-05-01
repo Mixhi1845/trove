@@ -37,5 +37,52 @@
   "Navigation": {
     "home": "Startseite",
     "pathnames": "Pfadnamen"
+  },
+  "Resources": {
+    "title-changelog": "Änderungsprotokoll",
+    "title-about": "Über uns",
+    "about": "<p>Trove! Es ist wie ein Einkaufszentrum für all deine wichtigen Produktivitäts-, Geld- und sozialen Tools. Das Beste daran? Es ist absolut zugänglich, datenschutzfreundlich und Open-Source. Keine Notwendigkeit mehr, zwischen einer Million verschiedener Apps und Websites hin und her zu springen, alles, was du brauchst, ist hier versammelt.</p><p>Das Team hinter Trove ist leidenschaftlich dabei, das Leben für jeden einfacher zu machen, nicht nur für technikaffine Leute. Wir bieten einfache, unkomplizierte Tools, die einfach funktionieren. Musst du deine Noten berechnen? Kein Problem. Versuchen, die besten Wechselkurse herauszufinden? Boom, haben wir das für dich. Möchtest du diese endlos lange URL verkürzen? Sag einfach Bescheid, wir kümmern uns darum.</p><p>Aber es geht hier nicht nur um die Tools, weißt du? Es geht darum, Menschen zu befähigen, die Kontrolle über ihr digitales Leben zu übernehmen. Wir glauben, dass jeder Zugang zu den Ressourcen haben sollte, die er braucht, um produktiv zu sein, sein Geld zu verwalten und mit der Welt um sich herum in Kontakt zu treten. Und genau darum geht es bei Trove.</p><p>Egal, ob du Student, Freelancer oder einfach jemand bist, der sein Leben auf die Reihe bekommen möchte, Trove hat deinen Rücken. Sieh dir das Änderungsprotokoll an, um zu sehen, was es Neues gibt, und zögere nicht, uns zu kontaktieren, wenn du Fragen oder Feedback hast. Wir sind hier, um dein Leben Schritt für Schritt zu erleichtern.</p>",
+    "title-contact": "Kontakt",
+    "contact": "<p>Hey, wenn du Fragen, Feedback oder einfach Lust zum Plaudern hast, wir hören dir gerne zu. Schick uns eine Nachricht an <a>support@trove.com</a> und unser freundliches Team wird sich so schnell wie möglich bei dir melden.</p><p>Wir arbeiten ständig daran, Trove zu verbessern und es so gut wie möglich zu machen, also scheue dich nicht. Lass uns wissen, welche Funktionen du dir wünschst, was gut funktioniert oder ob du irgendwelche Fehler entdeckt hast. Deine Rückmeldungen sind für uns sehr wertvoll, und wir werden unser Bestes geben, um sie umzusetzen.</p><p>Und wenn du besonders großzügig sein möchtest, würden wir uns freuen, wenn du dich unserer Community von Mitwirkenden auf GitHub anschließen würdest. Der Quellcode ist Open-Source, so dass du uns dabei helfen kannst, Trove zu einem noch leistungsfähigeren Tool für alle zu machen. Gemeinsam können wir die digitale Welt zu einem zugänglicheren und benutzerfreundlicheren Ort machen.</p>"
+  },
+  "Pomodoro": {
+    "title": "Pomodoro-Timer",
+    "meta-description": "Die Pomodoro-Technik ist eine Zeitmanagementmethode, die deine Produktivität und Konzentration deutlich verbessern kann. Indem du deine Arbeit in kurze, konzentrierte Intervalle und kurze Pausen einteilst, hilft dir die Pomodoro-Technik, ein konstantes Konzentrationsniveau beizubehalten und Ablenkungen zu minimieren.",
+    "question": "Warum sollte ich einen Pomodoro-Timer verwenden, um meine Produktivität zu steigern?",
+    "description": "<p>Die Pomodoro-Technik ist eine Zeitmanagementmethode, die deine Produktivität und Konzentration deutlich verbessern kann. Indem du deine Arbeit in kurze, konzentrierte Intervalle und kurze Pausen einteilst, hilft dir die Pomodoro-Technik, ein konstantes Konzentrationsniveau beizubehalten und Ablenkungen zu minimieren.</p><p>Hier sind die wichtigsten Gründe, warum du einen Pomodoro-Timer verwenden solltest:</p><ol><li><strong>Erhöhte Konzentration und Fokus</strong>: Die Pomodoro-Technik ermutigt dich, in konzentrierten, ungestörten 25-Minuten-Intervallen zu arbeiten, was dir dabei helfen kann, der Versuchung zu widerstehen, mehrere Aufgaben gleichzeitig auszuführen oder von E-Mails, sozialen Medien oder anderen Ablenkungen abgelenkt zu werden.</li><li><strong>Verbessertes Zeitmanagement</strong>: Indem du deine Arbeit in kleinere, überschaubarere Aufgaben untergliederst, kann dir die Pomodoro-Technik dabei helfen, besser zu verstehen, wie du deine Zeit verbringst, und Bereiche für Verbesserungen zu identifizieren.</li><li><strong>Reduzierte Burnout-Gefahr</strong>: Die regelmäßigen Pausen, die in die Pomodoro-Technik eingebaut sind, können geistige Erschöpfung und Burnout vorbeugen und dir ermöglichen, deine Produktivität den ganzen Tag über konstant zu halten.</li><li><strong>Verbesserter Work-Life-Ausgleich</strong>: Die Pomodoro-Technik kann dir dabei helfen, dein Berufs- und Privatleben besser voneinander zu trennen, indem sie dich dazu ermutigt, regelmäßige Pausen einzulegen und dich während dieser Intervalle von deiner Arbeit abzuwenden.</li><li><strong>Erhöhte Motivation und Produktivität</strong>: Das Gefühl der Erfüllung, das du nach Abschluss jedes Pomodoro-Intervalls empfindest, kann dir dabei helfen, motiviert und fokussiert auf deine Aufgaben zu bleiben, was zu einer insgesamt höheren Produktivität führt.</li></ol><p>Um mit der Pomodoro-Technik zu beginnen, brauchst du lediglich einen Timer (entweder manuell oder eine digitale Pomodoro-App) und die Bereitschaft, dich dem Prozess zu widmen. Gib es eine Chance und erlebe die transformierende Kraft dieser erprobten Produktivitätsmethode.</p>",
+    "mode1": "Arbeitszeit",
+    "mode2": "Pausenzeit",
+    "preseth": "Voreinstellungen",
+    "controlh": "Steuerung",
+    "start": "Start",
+    "stop": "Stopp",
+    "control1": "Fortsetzen",
+    "control2": "Pausieren",
+    "control3": "Zurücksetzen",
+    "cycleh": "Zyklen"
+  },
+  "ExchangeRates": {
+    "title": "Währungsrechner für Wechselkurse",
+    "meta-description": "Dieses Währungsumrechnungs-Tool ermöglicht es dir, einfach zwischen verschiedenen Währungen umzurechnen und unterstützt dich dabei, deine Finanzen zu managen und fundierte Entscheidungen bei Reisen oder internationalen Transaktionen zu treffen. Gib einfach den Betrag in deiner Basiswährung ein und das Tool berechnet sofort den entsprechenden Wert in deiner gewünschten Währung, so dass du immer über aktuelle Wechselkurse verfügst."
+  },
+  "Subscription": {
+    "title": "Abonnementskostenrechner",
+    "meta-description": "Verfolge die Preise für TV, Musik, Cloud, Bildung, Passwort-Management, Design und Gaming-Service-Pläne"
+  },
+  "QuoteFinder": {
+    "title": "Warum sind Zitate faszinierend?",
+    "meta-description": "Zitate sind faszinierend, weil sie einen Einblick in die Gedanken und Perspektiven einflussreicher Persönlichkeiten aus den verschiedensten Bereichen bieten. Ob es sich um eine kraftvolle Aussage eines renommierten Philosophen, eine denkwürdige Einsicht eines anerkannten Designers oder eine nachdenkliche Beobachtung zur menschlichen Natur handelt, Zitate können wertvolle Erkenntnisse und Inspiration liefern."
+  },
+  "Symbols": {
+    "title": "Wissenschaftliche Unicode-Symbol-Cheatsheet",
+    "meta-description": "Das wissenschaftliche Unicode-Symbol-Cheatsheet ist eine unschätzbare Ressource für alle, die in Wissenschaft, Technik oder technischen Bereichen tätig sind. Dieses umfassende Tool bietet Nutzern einfachen Zugriff auf eine Vielzahl spezialisierter Unicode-Symbole und ermöglicht ihnen, diese nahtlos in ihre Dokumente, Präsentationen und digitalen Kommunikationen einzubinden."
+  },
+  "ProfileDataFaker": {
+    "title": "Fake-Generator für Social-Media-Profile",
+    "meta-description": "Erstelle vollständig anpassbare Social-Media-Profile, inklusive Profilbilder, Biografien und mehr"
+  },
+  "Emojis": {
+    "title": "Emoji-Wikipedia - umfassende Ressource für Emoji-Informationen",
+    "meta-description": "Diese Seite ist ein leistungsfähiges Tool, das dir den einfachen Zugriff und die Erkundung einer riesigen Sammlung von Emojis ermöglicht. Mit einem einfachen Klick kannst du detaillierte Metadaten, einschließlich des Unicode, des Namens und der Beschreibung des Emojis, einsehen, was es zu einer wertvollen Ressource für alle macht, die sich für die Nutzung von Emojis in ihrer digitalen Kommunikation interessieren."
   }
 }

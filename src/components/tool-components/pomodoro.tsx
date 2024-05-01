@@ -8,6 +8,17 @@ interface PomodoroTimerProps {
   workDuration?: number;
   breakDuration?: number;
   presets?: { work: number; break: number }[];
+
+  mode1: string;
+  mode2: string;
+  preseth: string;
+  controlh: string;
+  start: string;
+  stop: string;
+  control1: string;
+  control2: string;
+  control3: string;
+  cycleh: string;
 }
 
 const PomodoroTimer: React.FC<PomodoroTimerProps> = ({
@@ -18,6 +29,16 @@ const PomodoroTimer: React.FC<PomodoroTimerProps> = ({
     { work: 45, break: 15 },
     { work: 60, break: 20 },
   ],
+  mode1,
+  mode2,
+  preseth,
+  controlh,
+  start,
+  stop,
+  control1,
+  control2,
+  control3,
+  cycleh,
 }) => {
   const [mode, setMode] = useState<"work" | "break">("work");
   const [duration, setDuration] = useState(workDuration * 60);
@@ -99,7 +120,7 @@ const PomodoroTimer: React.FC<PomodoroTimerProps> = ({
                 ).padStart(2, "0")}`}
               </div>
               <p className="text-muted-foreground">
-                {mode === "work" ? "Work Time" : "Break Time"}
+                {mode === "work" ? mode1 : mode2}
               </p>
             </div>
           </CardContent>
@@ -107,7 +128,7 @@ const PomodoroTimer: React.FC<PomodoroTimerProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <Card>
             <CardHeader>
-              <CardTitle>Presets</CardTitle>
+              <CardTitle>{preseth}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-3 gap-4">
@@ -125,7 +146,7 @@ const PomodoroTimer: React.FC<PomodoroTimerProps> = ({
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>Controls</CardTitle>
+              <CardTitle>{controlh}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-3 gap-4 mb-4">
@@ -136,7 +157,7 @@ const PomodoroTimer: React.FC<PomodoroTimerProps> = ({
                   onClick={isRunning ? stopTimer : startTimer}
                   disabled={isRunning && isPaused}
                 >
-                  {isRunning ? "Stop" : "Start"}
+                  {isRunning ? stop : start}
                 </Button>
                 <Button
                   className={`text-foreground hover:bg-muted/80 ${
@@ -145,25 +166,24 @@ const PomodoroTimer: React.FC<PomodoroTimerProps> = ({
                   onClick={togglePause}
                   disabled={!isRunning}
                 >
-                  {isPaused ? "Resume" : "Pause"}
+                  {isPaused ? control1 : control2}
                 </Button>
                 <Button
                   className="text-foreground hover:bg-blue-500/80 bg-blue-500"
                   onClick={resetTimer}
                 >
-                  Reset
+                  {control3}
                 </Button>
               </div>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>Statistics</CardTitle>
+              <CardTitle>{cycleh}</CardTitle>
             </CardHeader>
             <CardContent>
               <div>
-                <p>{completedPomodoros} Completed Pomodoro</p>
-                {/*<p>Total Work Time: {formatTime(totalWorkTime)}</p>*/}
+                <p className="text-3xl">{completedPomodoros}</p>
               </div>
             </CardContent>
           </Card>
@@ -171,13 +191,6 @@ const PomodoroTimer: React.FC<PomodoroTimerProps> = ({
       </div>
     </section>
   );
-};
-
-const formatTime = (seconds: number) => {
-  const hours = Math.floor(seconds / 3600);
-  const minutes = Math.floor((seconds % 3600) / 60);
-  const remainingSeconds = seconds % 60;
-  return `${hours}h ${minutes}m ${remainingSeconds}s`;
 };
 
 export default PomodoroTimer;

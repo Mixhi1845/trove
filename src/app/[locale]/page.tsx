@@ -11,6 +11,15 @@ import {
 } from "@/components/page-hero";
 import { buttonVariants } from "@/components/ui/button";
 import CategoryOverview from "@/components/tool-components/category-overview";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations({ locale, namespace: "Index" });
+
+  return {
+    title: `${t("title")} - trove`,
+  };
+}
 
 export default function IndexPage() {
   const t = useTranslations("Index");

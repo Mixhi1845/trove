@@ -1,6 +1,16 @@
 import PageLayout from "@/components/page-layout";
 import ProfileFaker from "@/components/tool-components/profile-faker";
 import ToolDescription from "@/components/tool-components/tool-description";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations({ locale, namespace: "ProfileDataFaker" });
+
+  return {
+    title: t("title"),
+    description: t("meta-description"),
+  };
+}
 
 export default function Page() {
   return (

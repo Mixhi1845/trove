@@ -1,6 +1,16 @@
 import PageLayout from "@/components/page-layout";
 import ScientificSymbols from "@/components/tool-components/symbols";
 import ToolDescription from "@/components/tool-components/tool-description";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations({ locale, namespace: "Symbols" });
+
+  return {
+    title: t("title"),
+    description: t("meta-description"),
+  };
+}
 
 export default function Page() {
   return (

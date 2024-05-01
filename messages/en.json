@@ -37,5 +37,52 @@
   "Navigation": {
     "home": "Home",
     "pathnames": "Pathnames"
+  },
+  "Resources": {
+    "title-changelog": "Changelog",
+    "title-about": "About",
+    "about": "<p>Trove! It's like a one-stop shop for all your essential productivity, money, and social tools. The best part? It's totally accessible, privacy-friendly, and open-source. No more bouncing between a million different apps and websites, everything you need is right here.</p> <p>The team behind Trove is passionate about making life easier for everyone, not just the tech-savvy folks. We're talking simple, straightforward tools that just work. Need to calculate your grades? No problem. Trying to figure out the best exchange rates? Boom, got you covered. Wanna shorten that long-AF URL? Say less, we've got that too.</p> <p>But this isn't just about the tools, you know? It's about empowering people to take control of their digital lives. We believe that everyone should have access to the resources they need to be productive, manage their money, and connect with the world around them. And that's exactly what Trove is all about.</p> <p>So whether you're a student, a freelancer, or just someone who wants to get their sh*t together, Trove's got your back. Check out the changelog to see what's new, and don't hesitate to reach out if you've got any questions or feedback. We're here to make your life easier, one tool at a time.</p>",
+    "title-contact": "Contact",
+    "contact": "<p>Hey there! If you've got any questions, feedback, or just wanna chat, we're all ears. Shoot us a message at <a>support@trove.com</a> and our friendly team will get back to you as soon as possible.</p> <p>We're always looking to improve Trove and make it the best it can be, so don't be shy. Let us know what features you'd like to see, what's working well, or if you've discovered any pesky bugs. Your input is invaluable, and we'll do our best to make it happen.</p> <p>And if you're feeling extra generous, we'd love for you to join our community of contributors on GitHub. The source code is open-source, so you can help us build Trove into an even more powerful tool for everyone. Together, we can make the digital world a more accessible and user-friendly place.</p>"
+  },
+  "Pomodoro": {
+    "title": "Pomodoro Timer",
+    "meta-description": "The Pomodoro Technique is a time management method that can significantly improve your productivity and focus. By dividing your work into short, focused intervals followed by short breaks, the Pomodoro Technique helps you maintain a consistent level of concentration and minimize distractions.",
+    "question": "Why should I use a Pomodoro Timer to Boost my Productivity ?",
+    "description": "<p>The Pomodoro Technique is a time management method that can significantly improve your productivity and focus. By dividing your work into short, focused intervals followed by short breaks, the Pomodoro Technique helps you maintain a consistent level of concentration and minimize distractions.</p><p>Here are the top reasons why you should consider using a Pomodoro Timer:</p><ol><li><strong>Increased Focus and Concentration</strong>: The Pomodoro Technique encourages you to work in focused, uninterrupted 25-minute intervals, which can help you avoid the temptation to multitask or get sidetracked by email, social media, or other distractions.</li><li><strong>Improved Time Management</strong>: By breaking down your work into smaller, more manageable tasks, the Pomodoro Technique can help you better understand how you spend your time and identify areas for improvement.</li><li><strong>Reduced Burnout</strong>: The regular breaks built into the Pomodoro Technique can help prevent mental fatigue and burnout, allowing you to maintain a consistent level of productivity throughout the day.</li><li><strong>Enhanced Work-Life Balance</strong>: The Pomodoro Technique can help you better separate your work and personal life by encouraging you to take regular breaks and step away from your work during those intervals.</li><li><strong>Increased Motivation and Productivity</strong>: The sense of accomplishment you'll feel after completing each Pomodoro can help you stay motivated and focused on your tasks, leading to greater overall productivity.</li></ol><p>To get started with the Pomodoro Technique, all you need is a timer (either a physical one or a digital Pomodoro app) and a willingness to commit to the process. Give it a try and experience the transformative power of this time-tested productivity method.</p>",
+    "mode1": "Work Time",
+    "mode2": "Break Time",
+    "preseth": "Presets",
+    "controlh": "Controls",
+    "start": "Start",
+    "stop": "Stop",
+    "control1": "Resume",
+    "control2": "Pause",
+    "control3": "Reset",
+    "cycleh": "Cycles"
+  },
+  "ExchangeRates": {
+    "title": "Exchange Rate Money Calculator",
+    "meta-description": "This Exchange Rate Money Conversion tool allows you to easily convert between different currencies, helping you manage your finances and make informed decisions when traveling or conducting international transactions. Simply enter the amount in your base currency and the tool will instantly calculate the equivalent value in your desired currency, ensuring you always have up-to-date exchange rates at your fingertips."
+  },
+  "Subscription": {
+    "title": "Subscription Cost Calculator",
+    "meta-description": "Track prices from TV, Music, Cloud, Education, Password Managment, Design, Gaming Service Plans"
+  },
+  "QuoteFinder": {
+    "title": "Why are quotes fascinating?",
+    "meta-description": "Quotes are fascinating because they offer a glimpse into the thoughts and perspectives of influential individuals from various walks of life. Whether it's a powerful statement from a renowned philosopher, a thought-provoking insight from a renowned designer, or a thought-provoking observation on the human condition, quotes can provide valuable insights and inspiration."
+  },
+  "Symbols": {
+    "title": "Scientific Unicode Symbol Cheatsheet",
+    "meta-description": "The Scientific Unicode Symbol Cheatsheet is an invaluable resource for anyone working in scientific, engineering, or technical fields. This comprehensive tool provides users with easy access to a vast collection of specialized Unicode symbols, empowering them to seamlessly incorporate these symbols into their documents, presentations, and digital communications."
+  },
+  "ProfileDataFaker": {
+    "title": "Social Media Profile Faker",
+    "meta-description": "Create fully customizable social media profiles, complete with profile pictures, biographies, and more"
+  },
+  "Emojis": {
+    "title": "Emoji Wikipedia - Comprehensive Resource for Emoji Information",
+    "meta-description": "This page is a powerful tool that allows you to easily access and explore a vast collection of emojis. With a simple click, you can view detailed metadata, including the emoji's Unicode, name, and description, making it a valuable resource for anyone interested in understanding and utilizing emojis in their digital communications."
   }
 }

@@ -1,15 +1,15 @@
-import { Icons } from "@/components/icons"
+import { Icons } from "@/components/icons";
 
 export interface StateItem {
-  states:{  
-    title: string
-    value: string
-    disabled?: boolean
-    external?: boolean
-    icon: keyof typeof Icons.states
-    label?: string
-    desc?: string
-  }[]
+  states: {
+    title: string;
+    value: string;
+    disabled?: boolean;
+    external?: boolean;
+    icon: keyof typeof Icons.states;
+    label?: string;
+    desc?: string;
+  }[];
 }
 
 export const statesConfig: StateItem = {

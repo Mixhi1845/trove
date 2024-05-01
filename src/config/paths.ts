@@ -58,7 +58,7 @@ export const pathsConfig: PathConfig = {
           items: [],
         },
         {
-          title: "Quotes",
+          title: "Quote Finder",
           href: "/socials/quotes",
           desc: "Provides you with inspirational and motivational quotes.",
           items: [],
