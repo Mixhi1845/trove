@@ -1,14 +1,20 @@
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { siteConfig } from "@/config/site";
+import { getLocale } from "next-intl/server";
+
 import PageLayout from "@/components/page-layout";
 import EmojiWiki from "@/components/tool-components/emojis";
 import ToolDescription from "@/components/tool-components/tool-description";
-import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({ params: { locale } }: any) {
+export async function generateMetadata() {
+  const locale = await getLocale();
   const t = await getTranslations({ locale, namespace: "Emojis" });
 
   return {
     title: t("title"),
     description: t("meta-description"),
+    alternates: { canonical: `${siteConfig.url}/${locale}/data/emojis` },
   };
 }
 

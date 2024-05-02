@@ -12,13 +12,6 @@ export const pathsConfig: PathConfig = {
       href: "",
       items: [
         {
-          title: "Grade Calculator",
-          href: "/productivity/grades",
-          label: "Calculator - soon",
-          desc: "Allows students to calculate and track their overall Graduation grade.",
-          items: [],
-        },
-        {
           title: "Pomodoro Timer",
           href: "/productivity/pomodoro",
           desc: "Helps to improve productivity by breaking work into focused 25-minute intervals separated by short breaks.",
@@ -50,13 +43,6 @@ export const pathsConfig: PathConfig = {
       title: "Socials",
       href: "",
       items: [
-        {
-          title: "URL Shortener",
-          href: "/socials/short-url",
-          label: "soon",
-          desc: "Creates short, shareable links from longer URLs.",
-          items: [],
-        },
         {
           title: "Quote Finder",
           href: "/socials/quotes",

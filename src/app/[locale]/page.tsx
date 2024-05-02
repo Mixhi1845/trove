@@ -1,4 +1,7 @@
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { siteConfig } from "@/config/site";
+import { getLocale } from "next-intl/server";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -11,13 +14,14 @@ import {
 } from "@/components/page-hero";
 import { buttonVariants } from "@/components/ui/button";
 import CategoryOverview from "@/components/tool-components/category-overview";
-import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({ params: { locale } }: any) {
+export async function generateMetadata() {
+  const locale = await getLocale();
   const t = await getTranslations({ locale, namespace: "Index" });
 
   return {
     title: `${t("title")} - trove`,
+    alternates: { canonical: `${siteConfig.url}/${locale}` },
   };
 }
 

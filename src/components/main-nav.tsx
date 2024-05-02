@@ -134,8 +134,8 @@ export function MainNav({
           className={cn(
             "transition-colors hover:text-foreground/80",
             pathname?.startsWith("/en/changelog") ||
-              pathname?.startsWith("/de/aenderungen") ||
-              pathname?.startsWith("/es/registro-de-cambios")
+              pathname?.startsWith("/de/changelog") ||
+              pathname?.startsWith("/es/changelog")
               ? "text-foreground"
               : "text-foreground/60"
           )}
@@ -147,8 +147,8 @@ export function MainNav({
           className={cn(
             "transition-colors hover:text-foreground/80",
             pathname?.startsWith("/en/about") ||
-              pathname?.startsWith("/de/ueber") ||
-              pathname?.startsWith("/es/acerca-de")
+              pathname?.startsWith("/de/about") ||
+              pathname?.startsWith("/es/about")
               ? "text-foreground"
               : "text-foreground/60"
           )}
@@ -160,8 +160,8 @@ export function MainNav({
           className={cn(
             "transition-colors hover:text-foreground/80",
             pathname?.startsWith("/en/contact") ||
-              pathname?.startsWith("/de/kontakt") ||
-              pathname?.startsWith("/es/contacto")
+              pathname?.startsWith("/de/contact") ||
+              pathname?.startsWith("/es/contact")
               ? "text-foreground"
               : "text-foreground/60"
           )}

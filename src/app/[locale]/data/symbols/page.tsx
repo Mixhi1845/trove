@@ -1,14 +1,20 @@
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { siteConfig } from "@/config/site";
+import { getLocale } from "next-intl/server";
+
 import PageLayout from "@/components/page-layout";
 import ScientificSymbols from "@/components/tool-components/symbols";
 import ToolDescription from "@/components/tool-components/tool-description";
-import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({ params: { locale } }: any) {
+export async function generateMetadata() {
+  const locale = await getLocale();
   const t = await getTranslations({ locale, namespace: "Symbols" });
 
   return {
     title: t("title"),
     description: t("meta-description"),
+    alternates: { canonical: `${siteConfig.url}/${locale}/data/symbols` },
   };
 }
 

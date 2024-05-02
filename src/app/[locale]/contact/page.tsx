@@ -1,13 +1,18 @@
-import PageLayout from "@/components/page-layout";
 import { useTranslations } from "next-intl";
-import ToolDescription from "@/components/tool-components/tool-description";
 import { getTranslations } from "next-intl/server";
+import { siteConfig } from "@/config/site";
+import { getLocale } from "next-intl/server";
 
-export async function generateMetadata({ params: { locale } }: any) {
+import PageLayout from "@/components/page-layout";
+import ToolDescription from "@/components/tool-components/tool-description";
+
+export async function generateMetadata() {
+  const locale = await getLocale();
   const t = await getTranslations({ locale, namespace: "Resources" });
 
   return {
     title: t("title-contact"),
+    alternates: { canonical: `${siteConfig.url}/${locale}/contact` },
   };
 }
 

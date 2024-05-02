@@ -1,14 +1,19 @@
+import { getTranslations } from "next-intl/server";
+import { siteConfig } from "@/config/site";
+import { getLocale } from "next-intl/server";
+
+import ToolDescription from "@/components/tool-components/tool-description";
 import PageLayout from "@/components/page-layout";
 import { ChangelogAPI } from "@/lib/getApiData";
 import MarkdownFormatter from "@/lib/markdown-formatter";
-import ToolDescription from "@/components/tool-components/tool-description";
-import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({ params: { locale } }: any) {
+export async function generateMetadata() {
+  const locale = await getLocale();
   const t = await getTranslations({ locale, namespace: "Resources" });
 
   return {
     title: t("title-changelog"),
+    alternates: { canonical: `${siteConfig.url}/${locale}/changelog` },
   };
 }
 
