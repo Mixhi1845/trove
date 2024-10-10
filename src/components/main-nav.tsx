@@ -27,6 +27,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
 interface MainNavProps {
@@ -45,23 +46,11 @@ function ToolMenu() {
       <NavigationMenuList>
         {pathsConfig.mainNav.map((group) => (
           <NavigationMenuItem key={group.title}>
-            <NavigationMenuTrigger className="font-normal px-2 lg:px-3 text-muted-foreground">
-              {group.title}
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {group.items.map((navItem) => (
-                  <ListItem
-                    key={navItem.href}
-                    title={navItem.title}
-                    href={navItem.href}
-                    label={navItem.label}
-                  >
-                    {navItem.desc}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
+            <Link href={group.href} legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                {group.title}
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
         ))}
       </NavigationMenuList>

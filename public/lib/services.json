@@ -8,15 +8,15 @@
           "plans": [
             {
               "name": "Basic",
-              "price": 8
-            },
-            {
-              "name": "Standard",
               "price": 10
             },
             {
+              "name": "Standard",
+              "price": 15.49
+            },
+            {
               "name": "Premium",
-              "price": 12
+              "price": 19.99
             }
           ],
           "trial": "30 days"
@@ -36,7 +36,7 @@
           "plans": [
             {
               "name": "Standard",
-              "price": 5
+              "price": 9.99
             }
           ],
           "trial": "5 days"
@@ -46,11 +46,11 @@
           "plans": [
             {
               "name": "Premium",
-              "price": 11
+              "price": 13.99
             },
             {
               "name": "Family Plan (5 members)",
-              "price": 16
+              "price": 22.99
             }
           ],
           "trial": "30 days"
@@ -65,15 +65,15 @@
           "plans": [
             {
               "name": "Individual",
-              "price": 6
+              "price": 10.99
             },
             {
               "name": "Premium Duo",
-              "price": 8
+              "price": 14.99
             },
             {
               "name": "Family",
-              "price": 10
+              "price": 16.99
             }
           ],
           "trial": "30 days"
@@ -97,15 +97,15 @@
           "plans": [
             {
               "name": "Prime Video",
-              "price": 8
+              "price": 14.99
             },
             {
               "name": "Prime Monthly",
-              "price": 13
+              "price": 14.99
             },
             {
               "name": "Prime Annual",
-              "price": 103
+              "price": 139
             }
           ],
           "trial": "Free Plan - Amazon"

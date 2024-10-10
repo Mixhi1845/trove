@@ -13,7 +13,6 @@ import {
   PageHeaderHeading,
 } from "@/components/page-hero";
 import { buttonVariants } from "@/components/ui/button";
-import CategoryOverview from "@/components/tool-components/category-overview";
 
 export async function generateMetadata() {
   const locale = await getLocale();
@@ -46,7 +45,6 @@ export default function IndexPage() {
           </Link>
         </PageActions>
       </PageHeader>
-      <CategoryOverview />
     </div>
   );
 }

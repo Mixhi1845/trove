@@ -18,7 +18,7 @@ export function Announcement() {
     >
       <Icons.gitHub className="mr-2 h-4 w-4" />
       <Separator className="mx-1 h-4" orientation="vertical" />
-      <span>{t("contribute")}</span>
+      <span>Contribute</span>
       <RxArrowRight className="ml-1 h-4 w-4" />
     </Link>
   );
